@@ -1,7 +1,5 @@
 // NOTE: This code is copied verbatim from https://medium.com/@otterlord/learn-peer-js-video-chat-app-bfaa0e976263 so that I could test if it works. 
 
-const Peer = require('peerjs')
-
 const peer = new Peer();
 var currentCall;
 peer.on("open", function (id) {
