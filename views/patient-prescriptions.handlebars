@@ -1,0 +1,35 @@
+<h1>Patient Prescriptions</h1>
+<table class="patient-prescriptions">
+  <tr>
+    <th>Drug Name</th>
+    <th>Form</th>
+    <th>Dosage</th>
+    <th>Quantity</th>
+    <th>Refills</th>
+    <th>Expiration</th>
+    <th>Instructions</th>
+    <th>Doctor</th>
+    <th>Pharmacy</th>
+    <th>Pharmacy Phone</th>
+    <th>Pharmacy Fax</th>
+    <th>Status</th>
+  </tr>
+{{#each prescriptions}}
+  <tr>
+    <td>{{this.drug}}</td>
+    <td>{{this.form}}</td>
+    <td>{{this.dosage}}</td>
+    <td>{{this.quantity}}</td>
+    <td>{{this.refills}}</td>
+    <td>{{this.expiration}}</td>
+    <td>{{this.instructions}}</td>
+    <td>{{this.doctorName}}</td>
+    <td>{{this.pharmacy}}</td>
+    <td>{{this.pharmacyPhone}}</td>
+    <td>{{this.pharmacyFax}}</td>
+    <td>{{this.status}}</td>
+  </tr>
+<tr>
+
+{{/each}}
+</table>

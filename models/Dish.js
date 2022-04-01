@@ -1,4 +1,4 @@
-// Here is where we set up our Dish model, for when we are ready to connect to a database in future activities.
+// this is from class, activity 5...
 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
