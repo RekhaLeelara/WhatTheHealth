@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/RekhaLeelara/WhatTheHealth/issues"
   },
-  "homepage": "https://github.com/RekhaLeelara/WhatTheHealth#readme"
+  "homepage": "https://github.com/RekhaLeelara/WhatTheHealth#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3"
+  }
 }
