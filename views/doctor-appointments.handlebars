@@ -1,12 +1,28 @@
-<!-- This template includes hardcoded data. In future lessons, you will be rendering data dynamically. -->
-<div class="menu-container">
-  <div class="card-header col-md-10">
-    <h2>
-      &#127869 Current Menu
-    </h2>
-  </div>
-    <div>
-      steve
-    </div>
-  </div>
-</div>
+<h1>Doctor Appointments</h1>
+<table class="doctor-appointments">
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Patient Name</th>
+    <th>Symptoms</th>
+    <th>Status</th>
+    <th>Checked-In</th>
+    <th>Actions:</th>
+  </tr>
+{{#each appointments as |apt|}}
+  <tr>
+    <td>{{this.date}}</td>
+    <td>{{this.time}}</td>
+    <td>{{this.patientName}}</td>
+    <td>{{this.symptoms}}</td>
+    <td>{{this.status}}</td>
+    <td>{{this.waitingRoom}}</td>
+    {{#if this.waitingRoom}}
+    <td><button>Start</button></td>
+    {{/if}}
+    <td><button>Cancel</button></td>
+  </tr>
+<tr>
+
+{{/each}}
+</table>

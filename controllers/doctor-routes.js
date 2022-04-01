@@ -5,25 +5,32 @@ const appointments = [
   {
     date: 'April 4, 2022',
     time: '10:20am',
-    doctorName: 'Dr. Nejad Ghaffar',
+    patientName: 'Michael Palumbo',
     symptoms: 'cold feet',
-    checkedIn: false,
-    cancel: 'inline button',
-    waitTime: 5
+    status: 'booked',
+    waitingRoom: false
+  },
+  {
+    date: 'April 4, 2022',
+    time: '10:35am',
+    patientName: 'Goofball McGee',
+    symptoms: 'puffy shirt',
+    status: 'booked',
+    waitingRoom: true
   }
   
 ];
 
 // Get all dishes
-router.get('/', async (req, res) => {
-  res.render('patient-appointments');
+router.get('/doctor/appointments', async (req, res) => {
+  res.render('doctor-appointments', {appointments});
 });
 
 
 
-// TODO: Add a route called `/dish/:num` below
-router.get('/dish/:num', async (req, res) => {
-  let dish = req.params.num -1
-  res.render('dish', dishes[dish]);
-});
-module.exports = router;
+// // TODO: Add a route called `/dish/:num` below
+// router.get('/dish/:num', async (req, res) => {
+//   let dish = req.params.num -1
+//   res.render('dish', dishes[dish]);
+// });
+// module.exports = router;

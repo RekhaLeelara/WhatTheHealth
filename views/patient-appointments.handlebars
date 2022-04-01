@@ -1,9 +1,24 @@
-<div class="dish-card">
-  <div class="dish-card-header">
-    {{dish_name}}
-  </div>
-  <div class="card-body">
-  <!-- TODO: Add your code here to render dish descriptions using Handlebars.js -->
-    {{dish_name}} {{description}} {{foo.bar}}
-  </div>
-</div>
+<h1>Patient Appointments</h1>
+<table class="patient-appointments">
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Doctor Name</th>
+    <th>Symptoms</th>
+    <th>Status</th>
+    <th>Wait Time</th>
+    <th>Actions:</th>
+  </tr>
+  {{#each appointments as |apt|}}
+    <tr>
+      <td>{{this.date}}</td>
+      <td>{{this.time}}</td>
+      <td>{{this.doctorName}}</td>
+      <td>{{this.symptoms}}</td>
+      <td>{{this.status}}</td>
+      <td>{{this.waitTime}}</td>
+      <td><button>Check-In</button></td>
+      <td><button>Cancel</button></td>
+    </tr>
+  {{/each}}
+</table>
