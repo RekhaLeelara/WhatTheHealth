@@ -1,13 +1,13 @@
 <h1>Patient Appointments</h1>
-<table class="patient-appointments">
+<table class="patient-appointments .table">
   <tr>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Doctor Name</th>
-    <th>Symptoms</th>
-    <th>Status</th>
-    <th>Wait Time (Minutes)</th>
-    <th>Actions:</th>
+    <th scope="col">Date</th>
+    <th scope="col">Time</th>
+    <th scope="col">Doctor Name</th>
+    <th scope="col">Symptoms</th>
+    <th scope="col">Status</th>
+    <th scope="col">Wait Time (Minutes)</th>
+    <th scope="col">Actions:</th>
   </tr>
   {{#each appointments as |apt|}}
     <tr>
