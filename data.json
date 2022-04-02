@@ -1,0 +1,52 @@
+[{
+    "model": "patient",
+    "data": {
+        "fname": "Alisha",
+        "lname": "Rivera",
+        "telephone": "(135)753-2346",
+        "address": "1717 Churchill Plaza",
+        "gender": "F",
+        "age": "50",
+        "Blood type": "A+"
+    },
+    {
+        "model": "patient",
+        "data":{
+        "fname": "Malakai",
+        "lname": "Villa",
+        "telephone": "(643)764-1256",
+        "address": "409 Holdom Avenue",
+        "gender": "F",
+        "age": "31",
+        "Blood type": "O-'"
+     }
+    },
+     {
+        "model": "patient",
+        "data":{
+        "fname": "Clare",
+        "lname": "Davis",
+        "telephone": "(642)176-7421",
+        "address": "1513 Hastings Street",
+        "gender": "F",
+        "age": "23",
+        "Blood type": "AB+"
+        }
+    },
+     {
+        "model": "patient",
+        "data": {
+        "fname": "Harley",
+        "lname": "Rojas",
+        "telephone": "(432)753-1274",
+        "address": "3292 St Jean Baptiste St",
+        "gender": "M",
+        "age": "82",
+        "Blood type": "B-"
+        }
+    },
+    
+    
+}  
+];
+

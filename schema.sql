@@ -52,10 +52,10 @@ INSERT INTO Doctor VALUES ('Dr. Angelo Cook', ' Physiotherapist ', '(416) 723-67
 INSERT INTO Doctor VALUES ('Dr. Patrick Frost', ' Dermatologist ', 'PHD' '(416) 980-2382');
 INSERT INTO Doctor VALUES ('Dr. Oswaldo Salas', ' Nephrologist ', '(416) 779-5475');
 
-INSERT INTO Patient VALUES ('833663', 'Alisha', 'Rivera', '1717 Churchill Plaza', '(135)753-2346', 'M', '50', 'A+', 'Dobson');
-INSERT INTO Patient VALUES ('922884', 'Malakai', 'Villa', '409 Holdom Avenue', '(643)764-1256', 'M', '31', 'O-', 'Campbell');
-INSERT INTO Patient VALUES ('383978', 'Clare', 'Davis', '1513 Hastings Street', '(642)176-7421', 'F', '23', 'AB+', 'Dobson ', '1423');
-INSERT INTO Patient VALUES ('696405', 'Harley', 'Rojas', '3292 St Jean Baptiste St', '(432)753-1274', 'M', '82', 'B-', 'Wheeler');
+INSERT INTO Patient VALUES ('833663', 'Alisha', 'Rivera', '1717 Churchill Plaza', '(135)753-2346', 'M', '50', 'A+');
+INSERT INTO Patient VALUES ('922884', 'Malakai', 'Villa', '409 Holdom Avenue', '(643)764-1256', 'M', '31', 'O-');
+INSERT INTO Patient VALUES ('383978', 'Clare', 'Davis', '1513 Hastings Street', '(642)176-7421', 'F', '23', 'AB+');
+INSERT INTO Patient VALUES ('696405', 'Harley', 'Rojas', '3292 St Jean Baptiste St', '(432)753-1274', 'M', '82', 'B-');
 
 INSERT INTO Prescription VALUES ('Atorvastatin', '20', '2022-10-30');
 INSERT INTO Prescription VALUES ('Lisinopril', '30', '2022-07-12');
