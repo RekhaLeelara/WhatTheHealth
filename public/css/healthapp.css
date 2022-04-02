@@ -1,0 +1,61 @@
+.header{
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 2px;
+    color: lightseagreen;
+    /* display: inline-block; */
+  }
+  
+  #title{
+    font-size: 50px;
+    margin-right: 80%;
+    background-color: lightseagreen;
+  }
+  
+  h1 {
+    color: green;
+  }
+
+
+.btn {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    /* padding: 20px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }
+  
+  
+  .article1{
+    border-top-width: 30px;
+    border-color: black;
+    border-style: solid;
+    margin-left: 30%;
+    margin-right:30%;
+    padding: 15px;
+  }
+  
+  #signUp{
+  
+  }
+  body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background-color:rgb(118, 126, 86);
+  }
+  
+  header {
+    /* padding: 2px; */
+    text-align: right;
+    background: var(--dark);
+    color: var(--secondary);
+    border-bottom-style: solid;
+  }

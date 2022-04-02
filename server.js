@@ -16,6 +16,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./controllers/patient-routes.js'));
 app.use(require('./controllers/doctor-routes.js'));
+app.use(require('./controllers/user-routes.js'));
 
 
 // Starts the server to begin listening
