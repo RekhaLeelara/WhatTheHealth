@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foundation 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
+  <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+</head>
+<body style="padding:20px">
+
+<h2>可折叠实例</h2>
+<ul class="accordion" data-accordion>
+  <li class="accordion-navigation">
+    <a href="#demo">简单的可折叠实例</a>
+    <div id="demo" class="content">
+     菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+    </div>
+  </li>
+</ul>
+
+<!-- 初始化 Foundation JS -->
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+</body>
+</html>

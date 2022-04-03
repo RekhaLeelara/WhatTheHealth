@@ -13,40 +13,41 @@
 
   <body>
 
-    
-    <div class="row">
-
+    <header>
       <nav class="top-bar" data-topbar>
-
+  
         <ul class="title-area">
-          <ol class="name">
+          <li class="name">
             <h1><a href="#">WhatTheHealth</a></h1>
-          </ol>          
+          </li>            
         </ul>
-
+    
         <section class="top-bar-section">
           <ul class="right">
             <li class="active"><a href="#">Sign out</a></li>
           </ul>
         </section>
+    
       </nav>
-            
-    </div> 
+    </header>
+      
 
-    <div class="row">
-
-      <div class="medium-4 columns" style="background-color:#f1f1f1;">
-        <ul class="side-nav">
-          <li class="active"><a href="#">Calendar</a></li>
-          <li><a href="#">Prescription</a></li>
-          <li><a href="#">Patient Search</a></li>
-          <li><a href="#">Reference</a></li>
-          <li><a href="#">Earning</a></li>    
-          <li><a href="#">Dashboard</a></li>
-        </ul>
-      </div>          
-
+    <div class="large-2 medium-4 columns" style="background-color:#f1f1f1;">
+      <ul class="side-nav accordion" data-accordion>
+        <li class="active"><a href="#">Calendar</a></li>
+        
+        <li class="accordion-navigation">
+          <a href="# ">Prescription</a>
+          <div class="content">test_prescription</div>
+        </li>
+                 
+        <li><a href="#">Patient Search</a></li>
+        <li><a href="#">Reference</a></li>
+        <li><a href="#">Earning</a></li>    
+        <li><a href="#">Dashboard</a></li>
+      </ul>
     </div>
-  
+    
+   
   </body>
 </html>
