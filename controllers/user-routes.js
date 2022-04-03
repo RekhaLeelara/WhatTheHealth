@@ -54,23 +54,34 @@ const dishes = [
   }
 ];
 
-router.get('/', async (req, res) => {
-  res.render('doctor-appointments', { dishes });
+// router.get('/', async (req, res) => {
+//   res.render('doctor-appointments', { dishes });
+// });
+
+// router.get('/', async (req, res) => {
+//   res.render('doctor-appointments', { dishes });
+// });
+
+router.get('/user', async (req, res) => {
+  res.render('user',hbsContent);
 });
 
-router.get('/user/', async (req, res) => {
-  res.render('user',hbsContent);
+router.get('/', (req, res) => {
+  // Access our User model and run .findAll() method
+  User.findAll({
+      attributes: { exclude: ['password'] }
+  })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 // CREATE a book
 router.post('/user', (req, res) => {
-  User.create({
-    username: req.body.username,
-    // //email: req.body.email,
-    password: req.body.password
-    // username: 'rekha',
-    // password: 'rekha'
-})
+  User.create(req.body)
+
 .then(user => {
     req.session.user = user.dataValues;
     // res.redirect('/dashboard');
@@ -80,6 +91,18 @@ router.post('/user', (req, res) => {
     // res.redirect('/user');
 });
 });
+
+// router.post('/', async(req, res) => {
+//   try {
+//     const tagData = await User.create({
+//       username: req.body.username,
+//       password: req.body.password
+//     });
+//     res.status(200).json(tagData);
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
 
 // get one dish
 router.get('/dish/:num', async (req, res) => {
