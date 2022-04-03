@@ -1,0 +1,38 @@
+<h1>Doctor Appointments</h1>
+<table class="doctor-appointments .table">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Patient Name</th>
+      <th scope="col">Symptoms</th>
+      <th scope="col">Status</th>
+      <th scope="col">Checked-In</th>
+      <th scope="col">Actions:</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each appointments as |apt|}}
+    <tr>
+      {{#if @index}}
+        <th scope="row">{{@index}}</th>
+      {{else}}
+        <th scope="row">Next</th>
+      {{/if}}))
+      <td>{{this.date}}</td>
+      <td>{{this.time}}</td>
+      <td>{{this.patientName}}</td>
+      <td>{{this.symptoms}}</td>
+      <td>{{this.status}}</td>
+      <td>{{this.waitingRoom}}</td>
+      {{#if this.waitingRoom}}
+      <td><button>Start</button></td>
+      {{/if}}
+      <td><button>Cancel</button></td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+
+
+</table>
