@@ -112,3 +112,18 @@ io.sockets.on('connection', function(socket) {
   });
 
 //! SAMPLE CODE END
+
+// serve webrtc js files
+
+app.route({
+  method: 'GET',
+  path: '/{/js/webrtc-config.js}',
+  handler: {
+    directory: {
+      path:    __dirname + '/public',
+      listing: false,
+      index:   false
+    }
+  }
+});
+
