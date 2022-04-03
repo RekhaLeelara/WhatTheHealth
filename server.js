@@ -7,7 +7,7 @@ const hbs = exphbs.create({});
 
 // Sets up the Express App
 const app = express();
-const routes = require('./controllers');
+// const routes = require(path.join(__dirname, 'controllers'));
 const PORT = process.env.PORT || 3001;
 
 
@@ -20,7 +20,7 @@ app.use(require('./controllers/patient-routes.js'));
 app.use(require('./controllers/doctor-routes.js'));
 app.use(require('./controllers/user-routes.js'));
 
-app.use(routes);
+// app.use(routes);
 // Starts the server to begin listening
 app.listen(PORT, () => {
   console.log(`Server listening on: http://localhost:${PORT}`);
