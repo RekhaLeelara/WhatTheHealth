@@ -67,5 +67,10 @@ router.get('/patient/prescriptions', async (req, res) => {
     res.render('patient-prescriptions', {prescriptions});
 });
 
+// video call
+router.get("/patient/appointments/video", function(req, res){
+  //Render a view (located in the directory views/) on this route
+	res.render("patient-video-call.handlebars");
+});
 
 module.exports = router;

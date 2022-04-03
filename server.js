@@ -1,7 +1,13 @@
+'use strict';
+
+
 // Dependencies
+var os = require('os'); //for operating system-related utility methods and properties
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
+var http = require('http');//for creating http server
 
 const hbs = exphbs.create({});
 
