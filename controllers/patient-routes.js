@@ -69,10 +69,6 @@ router.get('/patient/prescriptions', async (req, res) => {
 // video call
 router.get("/patient/appointments/video", function(req, res){
 
-  let room = {
-    roomID: uuidv4()
-  }
-  console.log(room)
   //Render a view (located in the directory views/) on this route
 	res.render("patient-video-call.handlebars", {roomID: uuidv4()});
 });
