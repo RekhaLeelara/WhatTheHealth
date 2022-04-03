@@ -1,26 +1,75 @@
-<head>
-  <meta charset="UTF-8">
-  <title>Potluck Party</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/healthapp.css">
-</head>
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <img src="public/images/logog.png" alt="Brand Logo">
-      <h1>
-        What the Health
-      </h1>
-            <a href="/user">Sign Up</a>
-    </header>
+  <head>
+    <meta charset="UTF-8">
+    <title>What The Health</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="/css/healthapp.css">
+    <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>WhatTheHealth</title>
+      <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
+      <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
+      <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+  </head>
+
+  <body>
+    <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2">
+        <h1>
+          What the Health
+        </h1>
+              <a href="/user">Sign Up</a>
+      </header>
       <main class="container container-fluid mt-5">
-        {{{ body }}}
+
+
+        <div class="row">
+
+          <nav class="top-bar" data-topbar>
+
+            <ul class="title-area">
+              <ol class="name">
+                <h1><a href="#">WhatTheHealth</a></h1>
+              </ol>          
+            </ul>
+
+            <section class="top-bar-section">
+              <ul class="right">
+                <li class="active"><a href="#">Sign out</a></li>
+              </ul>
+            </section>
+          </nav>
+                
+        </div> 
+
+        <div class="row">
+
+          <div class="medium-4 columns" style="background-color:#f1f1f1;">
+            <ul class="side-nav">
+              <li class="active"><a href="#">Calendar</a></li>
+              <li><a href="#">Prescription</a></li>
+              <li><a href="#">Patient Search</a></li>
+              <li><a href="#">Reference</a></li>
+              <li><a href="#">Earning</a></li>    
+              <li><a href="#">Dashboard</a></li>
+            </ul>
+          </div>          
+          <div class="medium-8 columns" style="background-color:#f1f1f1;">
+
+          {{!-- render views here --}}
+
+          {{{ body }}}
+
+          </div>
+        </div>
+  
       </main>
-  </div>
+    </div>
   </body>
 
 </html>

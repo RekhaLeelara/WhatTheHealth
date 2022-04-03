@@ -8,6 +8,7 @@ const session = require('express-session');
 const routes = require('./controllers/user-routes');
 // Sets up the Express App
 const app = express();
+// const routes = require(path.join(__dirname, 'controllers'));
 const PORT = process.env.PORT || 3001;
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -38,12 +39,12 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./controllers/patient-routes.js'));
 app.use(require('./controllers/doctor-routes.js'));
-app.use(require('./controllers/login-routes.js'));
-app.use(routes);
-app.use(express.urlencoded({ extended: true }));
+app.use(require('./controllers/user-routes.js'));
 
+// app.use(routes);
 // Starts the server to begin listening
-// turn on connection to db and server
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+const server = require("http").Server(app);
+
+server.listen(PORT, () => {
+  console.log(`Server listening on: http://localhost:${PORT}`);
 });
