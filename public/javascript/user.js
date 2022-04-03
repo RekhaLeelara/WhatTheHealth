@@ -17,7 +17,7 @@ function createUser(){
         headers: { "Content-Type": "application/json" }
     })
     .then(function(){
-        // document.location.replace('/');
+        document.location.replace('/doctor/appointments');
     })
     .catch(function(error){
         console.log("error!!");
