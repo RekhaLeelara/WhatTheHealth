@@ -1,6 +1,5 @@
 const router = require('express').Router();
-
-// harcoded for now, just to get things rolling
+const { v4: uuidv4 } = require('uuid');// harcoded for now, just to get things rolling
 const appointments = [
   {
     date: 'April 4, 2022',
@@ -69,8 +68,13 @@ router.get('/patient/prescriptions', async (req, res) => {
 
 // video call
 router.get("/patient/appointments/video", function(req, res){
+
+  let room = {
+    roomID: uuidv4()
+  }
+  console.log(room)
   //Render a view (located in the directory views/) on this route
-	res.render("patient-video-call.handlebars");
+	res.render("patient-video-call.handlebars", {roomID: uuidv4()});
 });
 
 module.exports = router;

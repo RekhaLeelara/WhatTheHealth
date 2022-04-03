@@ -163,3 +163,8 @@ nav {
   align-content: flex-start;
   align-items: center;
 }
+
+/* ! video calls */
+.h-100 {
+	height: 100%!important;
+}

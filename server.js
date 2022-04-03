@@ -67,6 +67,7 @@ io.sockets.on('connection', function(socket) {
   
 	  //Finding clients in the current room
     var clientsInRoom = io.sockets.adapter.rooms[room];
+    console.log(clientsInRoom)
 	  var numClients = clientsInRoom ? Object.keys(clientsInRoom.sockets).length : 0;
 	  log('Room ' + room + ' now has ' + numClients + ' client(s)');
   
@@ -112,18 +113,4 @@ io.sockets.on('connection', function(socket) {
   });
 
 //! SAMPLE CODE END
-
-// serve webrtc js files
-
-app.route({
-  method: 'GET',
-  path: '/{/js/webrtc-config.js}',
-  handler: {
-    directory: {
-      path:    __dirname + '/public',
-      listing: false,
-      index:   false
-    }
-  }
-});
 

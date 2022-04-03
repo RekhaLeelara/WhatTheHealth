@@ -14,7 +14,9 @@
 </head>
 
   <body>
-
+    {{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
+    testest {{roomID}}
+    <input type="hidden" id="roomID" value={{roomID}}>
     
     <div class="row">
 
@@ -205,7 +207,8 @@
 
 
               // Prompting for room name:
-              var room = prompt('Enter room name:');
+              var room = document.getElementById('roomID').value
+              console.log(room)
 
               //Initializing socket.io
               var socket = io.connect();
