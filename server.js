@@ -22,6 +22,8 @@ app.use(require('./controllers/user-routes.js'));
 
 // app.use(routes);
 // Starts the server to begin listening
-app.listen(PORT, () => {
+const server = require("http").Server(app);
+
+server.listen(PORT, () => {
   console.log(`Server listening on: http://localhost:${PORT}`);
 });
