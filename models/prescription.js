@@ -3,26 +3,20 @@ module.exports = function(sequelize, DataTypes) {
         med_name: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [1, 45]
-            }
+            
         },
         patient_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
         dose: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             
         },
-        amount: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1, 45]
-            }
+        
         },
+        {
         expiration_date: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -30,7 +24,7 @@ module.exports = function(sequelize, DataTypes) {
         },
     });
 
-    Prescription.associate = (models) => {
+    Prescription.doctor = (models) => {
         Prescription.hasMany(models.patient);
     }
     return Prescription;

@@ -5,14 +5,14 @@ var app = express();
 var PORT = 3306;
 
 class appointment {
-    constructor(n, p, e, i) {
+    constructor(n, p, i) {
         this.name = n;
         this.phone = p;
         this.id = i;
     }
 };
 
-var reservations = [];
+var appointment = [];
 var waitlist = [];
 
 
@@ -24,14 +24,14 @@ app.get("/", function(req, res) {
 
 app.get("/appointment", function(req, res) {
     res.sendFile(path.join(__dirname, " "));
-    hitcount++;
+
 });
 
 // See how many ahead in the queue
 
 app.get("/view", function(req, res) {
-    res.sendFile(path.join(__dirname, ""));
-    hitcount++;
+    res.sendFile(path.join(__dirname, "waitroom.html"));
+    
 });
 
 // Book new apointment if necessary
