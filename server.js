@@ -42,6 +42,8 @@ app.use(require('./controllers/patient-routes.js'));
 app.use(require('./controllers/doctor-routes.js'));
 app.use(require('./controllers/login-routes.js'));
 app.use(require('./controllers/home-routes.js'));
+app.use(require('./controllers/book-appointment.js'));
+
 
 app.use(routes);
 // Starts the server to begin listening

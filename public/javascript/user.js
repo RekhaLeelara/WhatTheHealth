@@ -1,41 +1,42 @@
-async function signupFormHandler(event) {
-    event.preventDefault();
-  
+
+try{
+
+document.getElementById('signUp-btn').addEventListener('click', createUser);
+}catch(error){
+console.error();
+}
+
+
+function createUser(){
+    console.log("Hello!!");
     const username = document.getElementById('username-input').value.trim();
     const password = document.getElementById('password-input').value.trim();
-    const doctor = document.getElementById('doctor');
-    const patient = document.getElementById('patient');
-    var userType = 'novalue';
+    var usertype = 'novalue';
 
     if (doctor.checked){
-        userType = 'doctor'
+        usertype = "doctor"
     }
     if(patient.checked){
-        userType = 'patient'
+        usertype = "patient"
     }
-  
-    if (username && password) {
 
-      const response = await fetch('user', {
+
+    fetch('user', {
         method: 'post',
         body: JSON.stringify({
-          username,
-          password,
-          userType
+            username,
+            password,
+            usertype
         }),
-        headers: { 'Content-Type': 'application/json' }
-      });
-  
-      // check the response status
-      if (response.ok) {
-        console.log('success');
-        document.location.replace('/');
-      } else {
-        // alert(response.statusText);
-        alert(err);
-      }
-    }
+            
+
+        headers: { "Content-Type": "application/json" }
+    })
+    .then(function(){
+        // document.location.replace('/');
+    })
+    .catch(function(error){
+        console.log("error!!");
+    });
 }
-  
-document.getElementById('signUp-btn').addEventListener('click', signupFormHandler);
 

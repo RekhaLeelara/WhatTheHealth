@@ -25,6 +25,10 @@ User.init(
           type: DataTypes.STRING,
           allowNull: false
         },
+        usertype: {
+          type: DataTypes.STRING,
+          allowNull: true
+        },
         // define a password column
         password: {
           type: DataTypes.STRING,
@@ -33,10 +37,7 @@ User.init(
             len: [4]
           }
         },
-        usertype: {
-          type: DataTypes.STRING,
-          allowNull: true
-        }
+
       },
   {
       hooks: {

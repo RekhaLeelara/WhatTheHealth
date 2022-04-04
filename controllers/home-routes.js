@@ -26,7 +26,6 @@ router.post('/user', (req, res) => {
   
       res.json(dbUserData);
     });
-    res.replace()
 
   });
 });

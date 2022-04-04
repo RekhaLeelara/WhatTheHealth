@@ -16,16 +16,17 @@ router.post('/user', (req, res) => {
   console.log("posted successfully");
   User.create({
     username: req.body.username,
-    password: req.body.password,
-    usertype: 'doctor'
+    usertype: req.body.usertype,
+    password: req.body.password
   })
   .then(dbUserData => {
     req.session.save(() => {
       req.session.username = dbUserData.username;
       req.session.user_id = dbUserData.id;
+      req.session.user_type = dbUserData.usertype;
       req.session.loggedIn = true;
   
-      res.json(dbUserData);
+      // res.json(dbUserData);
     });
 
   });
