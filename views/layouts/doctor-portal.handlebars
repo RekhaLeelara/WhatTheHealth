@@ -11,7 +11,6 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>WhatTheHealth</title>
-
       <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
       <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
       <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
@@ -21,16 +20,11 @@
   <body>
     <div class="flex-column justify-space-around">
       <header class="display-flex justify-space-between align-center p-2">
-              {{!-- <img alt="What the health logo" src="../../public/images/logoSmall.jpeg" style="width: 250px; height: 150px;"> --}}
-{{!-- <img alt="What the health logo" src="http://localhost:3001/public/images/logoSmallSmall.jpeg" style="width: 250px; height: 150px;"> --}}
-<img alt="What the health logo" src="http://localhost:3001/public/images/Provider-Sharma-Large-300x225.png" style="width: 250px; height: 150px;">
-              
         <h1>
           What the Health
         </h1>
               <a href="/user">Sign Up</a>
       </header>
-
       <main class="container container-fluid mt-5">
 
 
@@ -54,6 +48,18 @@
         </div> 
 
         <div class="row">
+
+          <div class="medium-4 columns" style="background-color:#f1f1f1;">
+            <ul class="side-nav">
+              <li class="active"><a href="#">Calendar</a></li>
+              <li><a href="#">Prescription</a></li>
+              <li><a href="#">Patient Search</a></li>
+              <li><a href="#">Reference</a></li>
+              <li><a href="#">Earning</a></li>    
+              <li><a href="#">Dashboard</a></li>
+            </ul>
+          </div>          
+          <div class="medium-8 columns" style="background-color:#f1f1f1;">
 
           {{!-- render views here --}}
 
