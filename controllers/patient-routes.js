@@ -3,6 +3,7 @@ const router = require('express').Router();
 // harcoded for now, just to get things rolling
 const appointments = [
   {
+    id: 1,
     date: 'April 4, 2022',
     time: '10:20am',
     doctorName: 'Dr. Foo McBar',
@@ -66,6 +67,12 @@ const prescriptions = [
 router.get('/patient/prescriptions', async (req, res) => {
     res.render('patient-prescriptions', {prescriptions});
 });
+
+  
+router.get('/patient/appointments/call', async (req, res) => {
+  res.render('patient-video-call', {roomID: 1});
+});
+
 
 
 module.exports = router;
