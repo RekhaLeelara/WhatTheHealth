@@ -32,12 +32,11 @@ User.init(
           validate: {
             len: [4]
           }
+        },
+        usertype: {
+          type: DataTypes.STRING,
+          allowNull: true
         }
-        // ,
-        // usertype: {
-        //   type: DataTypes.STRING,
-        //   allowNull: false
-        // }
       },
   {
       hooks: {

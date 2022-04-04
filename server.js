@@ -36,15 +36,18 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./controllers/patient-routes.js'));
 app.use(require('./controllers/doctor-routes.js'));
-app.use(require('./controllers/user-routes.js'));
+app.use(require('./controllers/login-routes.js'));
+app.use(require('./controllers/home-routes.js'));
 
-// app.use(routes);
+app.use(routes);
 // Starts the server to begin listening
-const server = require("http").Server(app);
+// const server = require("http").Server(app);
 
-server.listen(PORT, () => {
-  console.log(`Server listening on: http://localhost:${PORT}`);
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
+

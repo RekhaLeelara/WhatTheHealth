@@ -3,19 +3,21 @@ const User = require('../models/User');
 
 
 router.get('/user', (req, res) => {
-res.render('all')
+res.render('signup')
 });
 
 router.get('/', (req, res) => {
-  res.render('all')
+  res.render('signup')
   });
   
 
 // POST /api/users
 router.post('/user', (req, res) => {
+  console.log("posted successfully");
   User.create({
     username: req.body.username,
-    password: req.body.password
+    password: req.body.password,
+    usertype: 'doctor'
   })
   .then(dbUserData => {
     req.session.save(() => {
@@ -25,6 +27,7 @@ router.post('/user', (req, res) => {
   
       res.json(dbUserData);
     });
+
   });
 });
 
