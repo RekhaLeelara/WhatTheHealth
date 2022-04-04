@@ -3,6 +3,7 @@ CREATE DATABASE clinic;
 USE clinic;
 
 CREATE TABLE doctor (
+    
 name VARCHAR(20),
 degree VARCHAR(20),
 telephone VARCHAR(20),
@@ -77,3 +78,5 @@ INSERT INTO Doctor_Patient VALUES ('Dr. Ayaan Summers', '833663', '2022-01-04');
 INSERT INTO Doctor_Patient VALUES ('Dr. Ayaan Summers', '696405', '2021-12-13');
 INSERT INTO Doctor_Patient VALUES ('Dr. Oswaldo Salas', '383978', '2021-12-16');
 INSERT INTO Doctor_Patient VALUES ('Dr. Daniela Curry', '922884', '2021-11-19');
+
+-- INSERT INTO user VALUES ('rekhabalaji', 'rekha', NULL);

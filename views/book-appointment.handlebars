@@ -1,0 +1,87 @@
+<main class="container container-fluid mt-5">
+
+
+    <div class="row">
+
+        <nav class="top-bar" data-topbar>
+
+            <ul class="title-area">
+                <ol class="name">
+                    <h1><a href="#">WhatTheHealth</a></h1>
+                </ol>
+            </ul>
+
+            <section class="top-bar-section">
+                <ul class="right">
+                    <li class="active"><a href="#">Sign out</a></li>
+                </ul>
+            </section>
+        </nav>
+
+    </div>
+
+    <div class="row">
+
+        <div class="medium-4 columns" style="background-color:#f1f1f1;">
+            <ul class="side-nav">
+                <li class="active"><a href="#">Calendar</a></li>
+                <li><a href="#">Prescription</a></li>
+                <li><a href="#">Patient Search</a></li>
+                <li><a href="#">Reference</a></li>
+                <li><a href="#">Earning</a></li>
+                <li><a href="#">Dashboard</a></li>
+            </ul>
+        </div>
+        <div class="medium-8 columns" style="background-color:#f1f1f1;">
+            <h1>Book Appointments</h1>
+            <p>Monday April 11, 2022</p>
+            <table class="patient-appointments .table">
+                <tr>
+                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Specialty</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Symptoms</th>
+                    <th scope="col">Availability</th>
+                </tr>
+                {{#each appointments as |apt|}}
+                <tr>
+                    <td>{{this.doctorName}}</td>
+                    <td>{{this.Specialty}}</td>
+                    <td>{{this.Phone}}</td>
+                    {{!-- <td>{{this.symptoms}}</td> --}}
+                    {{!-- <td>{{this.status}}</td> --}}
+                    <td></td>
+                    <td><span><a href="time" id="time">9:00 AM</a></span>
+                        <span><a href="time" id="time">10:00 AM</a></span>
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+                        <p>Tuesday April 12, 2022</p>
+            <table class="patient-appointments .table">
+                <tr>
+                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Specialty</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Symptoms</th>
+                    <th scope="col">Availability</th>
+                </tr>
+                {{#each appointments as |apt|}}
+                <tr>
+                    <td>{{this.doctorName}}</td>
+                    <td>{{this.Specialty}}</td>
+                    <td>{{this.Phone}}</td>
+                    {{!-- <td>{{this.symptoms}}</td> --}}
+                    {{!-- <td>{{this.status}}</td> --}}
+                    <td></td>
+                    <td><span><a href="time" id="time">9:00 AM</a></span>
+                        <span><a href="time" id="time">10:00 AM</a></span>
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+            <script>
+                document.getElementById('time').addEventListener('click', signupFormHandler);
+                alert("Your Appointment has been booked successfully!");
+            </script>
+        

@@ -1,48 +1,64 @@
-// Here is where we set up our Dish model, for when we are ready to connect to a database in future activities.
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
-class User extends Model {}
+// create our User model
+class User extends Model {
+    // set up method to run on instance data (per user) to check password
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+    }
+}
 
+// define table columns and configuration
 User.init(
+    {
+        // define an id column
+        id: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          primaryKey: true,
+          autoIncrement: true
+        },
+        // define a username column
+        username: {
+          type: DataTypes.STRING,
+          allowNull: false
+        },
+        usertype: {
+          type: DataTypes.STRING,
+          allowNull: true
+        },
+        // define a password column
+        password: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          validate: {
+            len: [4]
+          }
+        },
+
+      },
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-  },
-  {
+      hooks: {
+        // set up beforeCreate lifecycle "hook" functionality
+        async beforeCreate(newUserData) {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+        },
+          // set up beforeUpdate lifecycle "hook" functionality
+        async beforeUpdate(updatedUserData) {
+            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+            return updatedUserData;
+        }
+      },
+
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'user'
   }
 );
-
-User.beforeCreate((User, options) => {
-	const salt = bcrypt.genSaltSync();
-	User.password = bcrypt.hashSync(User.password, salt);
-});
-  
- 
-User.prototype.validPassword = function(password) {
-        return bcrypt.compareSync(password, this.password);
-      }; 
-
-// create all the defined tables in the specified database.
-sequelize.sync()
-    .then(() => console.log('users table has been successfully created, if one doesn\'t exist'))
-    .catch(error => console.log('This error occured', error));
 
 module.exports = User;
