@@ -99,7 +99,8 @@ router.post('/patient/bookAppointments/book-appointment', (req, res) => {
   console.log("posted successfully");
   BookAppointment.create({
     // username: req.session.username,
-    // appointmentID: uuidv4(),
+    username: "rekha",
+    appointmentID: uuidv4(),
     doctorName: req.body.doctorName,
     date: req.body.date,
     time: req.body.time,
