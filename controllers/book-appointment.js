@@ -70,7 +70,9 @@ router.get('/patient/bookAppointments/time', async (req, res) => {
   // alert("Your Appointment has been booked successfully!");
 });
 
-
+router.get('/patient/bookAppointments/book-appointment', async (req, res) => {
+  res.render('book-appointment', {appointments});
+});
 
 // book a new appointment
 const BookAppointment = require('../models/Booking');
@@ -81,6 +83,22 @@ router.post('book-appointment', (req, res) => {
   User.create({
     username: req.session.username,
     appointmentID: uuidv4(),
+    doctorName: req.body.doctorName,
+    date: req.body.date,
+    time: req.body.time,
+    symptoms: req.body.symptoms
+  })
+  .then(dbUserData => {
+
+
+  });
+});
+
+router.post('/patient/bookAppointments/book-appointment', (req, res) => {
+  console.log("posted successfully");
+  BookAppointment.create({
+    // username: req.session.username,
+    // appointmentID: uuidv4(),
     doctorName: req.body.doctorName,
     date: req.body.date,
     time: req.body.time,
