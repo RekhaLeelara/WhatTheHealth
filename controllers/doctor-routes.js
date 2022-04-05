@@ -25,7 +25,7 @@ router.get('/doctor/appointments', async (req, res) => {
 });
 
 router.get('/doctor', async (req, res) => {
-  res.render('doctor-landing');
+  res.render('doctor');
 });
 
 
