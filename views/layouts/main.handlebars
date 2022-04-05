@@ -1,69 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
-    <title>What The Health</title>
-    <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="/css/style.css">
-      <link rel="stylesheet" href="/css/healthapp.css">
-    <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>WhatTheHealth</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatTheHealth</title> 
 
-      <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
-      <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-      <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
-      <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+    <!-- use the Bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- use the foundation css -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+    
+    <style>
+
+      .background {
+        background-image: url("./assets/img/background.jpg");
+        height: 100vh;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        background {
+          margin-top: -58.59px;
+        }
+      }
+
+      footer {
+          background: lightblue;
+          width: 100%;
+          padding: 40px 35px;
+      }
+
+      footer {
+          font-size: 15px;
+          line-height: 1.5;
+          text-align: center;
+          color: #000;
+          padding: 10px;
+      }
+
+      footer a {
+          color: #000;
+      }
+
+    </style>
+      
   </head>
 
   <body>
-    <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
-              {{!-- <img alt="What the health logo" src="../../public/images/logoSmall.jpeg" style="width: 250px; height: 150px;"> --}}
-{{!-- <img alt="What the health logo" src="http://localhost:3001/public/images/logoSmallSmall.jpeg" style="width: 250px; height: 150px;"> --}}
-<img alt="What the health logo" src="http://localhost:3001/public/images/Provider-Sharma-Large-300x225.png" style="width: 250px; height: 150px;">
-              
-        <h1>
-          What the Health
-        </h1>
-              <a href="/user">Sign Up</a>
-      </header>
 
-      <main class="container container-fluid mt-5">
+    <header>
+      <nav class="top-bar" data-topbar>
 
-
-        <div class="row">
-
-          <nav class="top-bar" data-topbar>
-
-            <ul class="title-area">
-              <ol class="name">
-                <h1><a href="#">WhatTheHealth</a></h1>
-              </ol>          
-            </ul>
-
-            <section class="top-bar-section">
-              <ul class="right">
-                <li class="active"><a href="#">Sign out</a></li>
-              </ul>
-            </section>
-          </nav>
-                
-        </div> 
-
-        <div class="row">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">WhatTheHealth</a></h1>
+          </li>
+    
+          <!-- display the menu instead of the selections -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            
+        </ul>
+    
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </section>
+    
+      </nav>
+    </header>
 
           {{!-- render views here --}}
 
-          {{{ body }}}
+    {{{ body }}}
 
-          </div>
-        </div>
-  
-      </main>
-    </div>
+    <footer>
+      <div>
+          <a href="#">Read Our Privacy Policy</a><br /> &copy; WhatTheHealth. All right reserved
+      </div>
+    </footer>
+
+    <!-- initialize Foundation JS -->
+    <script>
+    $(document).ready(function() {
+        $(document).foundation();
+    })
+    </script>
+
   </body>
-
 </html>
