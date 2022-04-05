@@ -1,75 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html class="no-js" lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>What The Health</title>
-    <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="/css/style.css">
-      <link rel="stylesheet" href="/css/healthapp.css">
-    <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>WhatTheHealth</title>
-      <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
-      <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-      <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
-      <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatTheHealth</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   </head>
-
   <body>
-    <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
-        <h1>
-          What the Health
-        </h1>
-              <a href="/user">Sign Up</a>
-      </header>
-      <main class="container container-fluid mt-5">
 
-
-        <div class="row">
-
-          <nav class="top-bar" data-topbar>
-
-            <ul class="title-area">
-              <ol class="name">
-                <h1><a href="#">WhatTheHealth</a></h1>
-              </ol>          
-            </ul>
-
-            <section class="top-bar-section">
-              <ul class="right">
-                <li class="active"><a href="#">Sign out</a></li>
-              </ul>
-            </section>
-          </nav>
-                
-        </div> 
-
-        <div class="row">
-
-          <div class="medium-4 columns" style="background-color:#f1f1f1;">
-            <ul class="side-nav">
-              <li class="active"><a href="#">Calendar</a></li>
-              <li><a href="#">Prescription</a></li>
-              <li><a href="#">Patient Search</a></li>
-              <li><a href="#">Reference</a></li>
-              <li><a href="#">Earning</a></li>    
-              <li><a href="#">Dashboard</a></li>
-            </ul>
-          </div>          
-          <div class="medium-8 columns" style="background-color:#f1f1f1;">
-
-          {{!-- render views here --}}
-
-          {{{ body }}}
-
-          </div>
-        </div>
-  
-      </main>
+    <!-- Start Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Patient View</li>
+          
+        </ul>
+      </div>
     </div>
-  </body>
+    <!-- End Top Bar -->
 
+
+    
+
+    <div class="row column text-center">
+      <h2>Waiting Room</h2>
+      <hr>
+    </div>
+
+    <div class="row small-up-3 large-up-3">
+      <div class="column">
+       
+        <h5> Patients Ahead </h5>
+        <i class="fa-solid fa-business-time"></i>
+        <p>4</p>
+        
+      </div>
+      <div class="column">
+        <i class="fa-solid fa-timer"></i>
+        <h5>Total Wait Time</h5>
+        <p>50 minutes</p>
+        
+      </div>
+      <div class="column">
+        <i class="fa-solid fa-business-time"></i>
+        <h5>Your Wait Time</h5>
+        <p>6 minutes</p>
+        
+      </div>
+      
+    </div>
+ 
+    <hr>
+    <a href="#" class="button expanded">Back to Home</a>
+    
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
 </html>
