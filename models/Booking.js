@@ -31,7 +31,7 @@ Booking.init(
         },
         doctorName: {
           type: DataTypes.STRING,
-          allowNull: true
+          allowNull: false
         },
         // define a date column
         date: {
@@ -46,7 +46,11 @@ Booking.init(
         // define a symptoms column
         symptoms: {
           type: DataTypes.STRING,
-          allowNull: false,
+          allowNull: true,
+        },
+        checkedIn:{
+          type: DataTypes.STRING,
+          allowNull: true
         }
 
       },
