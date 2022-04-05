@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { v4: uuidv4 } = require('uuid');
 
 // harcoded for now, just to get things rolling
 const appointments = [
@@ -76,7 +77,7 @@ router.get('/patient/bookAppointments/time', async (req, res) => {
 const BookAppointment = require('../models/Booking');
 
 // POST /api/users
-router.post('book-appointment', (req, res) => {
+router.post('bookAppointments/book-appointment', (req, res) => {
   console.log("posted successfully");
   User.create({
     username: req.session.username,
