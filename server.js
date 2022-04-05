@@ -44,7 +44,6 @@ app.use(require('./controllers/login-routes.js'));
 app.use(require('./controllers/home-routes.js'));
 app.use(require('./controllers/book-appointment.js'));
 
-
 app.use(routes);
 // Starts the server to begin listening
 // const server = require("http").Server(app);
