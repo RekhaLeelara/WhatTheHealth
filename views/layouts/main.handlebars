@@ -3,19 +3,22 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>What The Health</title>
-    <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="/css/style.css">
-      <link rel="stylesheet" href="/css/healthapp.css">
-    <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>WhatTheHealth</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatTheHealth</title> 
+ 
+    <!-- use the Bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-      <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
-      <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-      <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
-      <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+    <!-- use the foundation css -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>    
+
+    <link rel="stylesheet" href="http://localhost:3001/public/css/style.css">
   </head>
 
   <body>
@@ -23,7 +26,7 @@
       <header class="display-flex justify-space-between align-center p-2">
               {{!-- <img alt="What the health logo" src="../../public/images/logoSmall.jpeg" style="width: 250px; height: 150px;"> --}}
 {{!-- <img alt="What the health logo" src="http://localhost:3001/public/images/logoSmallSmall.jpeg" style="width: 250px; height: 150px;"> --}}
-<img alt="What the health logo" src="http://localhost:3001/public/images/Provider-Sharma-Large-300x225.png" style="width: 250px; height: 150px;">
+        <img alt="What the health logo" src="http://localhost:3001/public/images/Provider-Sharma-Large-300x225.png" style="width: 250px; height: 150px;">
               
         <h1>
           What the Health
@@ -64,6 +67,21 @@
   
       </main>
     </div>
-  </body>
+
+
+    <footer>
+      <div>
+          <a href="#">Read Our Privacy Policy</a><br /> &copy; 2022 WhatTheHealth. All right reserved
+      </div>
+    </footer>
+
+  <!-- initialize Foundation JS -->
+  <script>
+  $(document).ready(function() {
+      $(document).foundation();
+  })
+  </script>
+
+  </body>  
 
 </html>
