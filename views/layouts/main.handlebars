@@ -68,11 +68,11 @@
             
         </ul>
     
-        <section class="top-bar-section">
+        <section class="top-bar-section" id="topBar">
           <ul class="right">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a data-link="about" href="#">About us</a></li>
+            <li><a data-link="login" >Login</a></li>
           </ul>
         </section>
     
@@ -94,6 +94,15 @@
     $(document).ready(function() {
         $(document).foundation();
     })
+
+    // menu bar clicking
+    $('#topBar').click(function(e) { 
+      
+      var url = '/' + e.target.dataset.link
+      
+      document.location.replace(url);
+      
+    }); 
     </script>
 
   </body>
