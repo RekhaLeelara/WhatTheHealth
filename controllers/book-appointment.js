@@ -104,7 +104,9 @@ router.post('/patient/bookAppointments/book-appointment', (req, res) => {
     doctorName: req.body.doctorName,
     date: req.body.date,
     time: req.body.time,
-    symptoms: req.body.symptoms
+    symptoms: req.body.symptoms,
+    patientID: 1,
+    doctorID: 1
   })
   .then(dbUserData => {
 
