@@ -24,5 +24,9 @@ router.get('/doctor/appointments', async (req, res) => {
   res.render('doctor-appointments', {appointments});
 });
 
+router.get('/doctor', async (req, res) => {
+  res.render('doctor-landing');
+});
+
 
 module.exports = router;
