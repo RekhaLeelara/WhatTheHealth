@@ -79,7 +79,7 @@ const BookAppointment = require('../models/Booking');
 // POST /api/users
 router.post('bookAppointments/book-appointment', (req, res) => {
   console.log("posted successfully");
-  User.create({
+  BookAppointment.create({
     username: req.session.username,
     appointmentID: uuidv4(),
     doctorName: req.body.doctorName,
