@@ -34,26 +34,47 @@
           </div>          
           <div class="medium-8 columns" style="background-color:#f1f1f1;">      
 <h1>Patient Appointments</h1>
-<table class="patient-appointments .table">
-  <tr>
-    <th scope="col">Date</th>
-    <th scope="col">Time</th>
-    <th scope="col">Doctor Name</th>
-    <th scope="col">Symptoms</th>
-    <th scope="col">Status</th>
-    <th scope="col">Wait Time (Minutes)</th>
-    <th scope="col">Actions:</th>
-  </tr>
-  {{#each appointments as |apt|}}
+<div class="appointments" id="appointments">
+  <table class="patient-appointments .table">
     <tr>
-      <td>{{this.date}}</td>
-      <td>{{this.time}}</td>
-      <td>{{this.doctorName}}</td>
-      <td>{{this.symptoms}}</td>
-      <td>{{this.status}}</td>
-      <td>{{this.waitTime}}</td>
-      <td><button>Check-In</button></td>
-      <td><button>Cancel</button></td>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Doctor Name</th>
+      <th scope="col">Symptoms</th>
+      <th scope="col">Status</th>
+      <th scope="col">Wait Time (Minutes)</th>
+      <th scope="col">Actions:</th>
     </tr>
-  {{/each}}
-</table>
+    {{#each appointments as |apt|}}
+      <tr>
+        <td>{{this.date}}</td>
+        <td>{{this.time}}</td>
+        <td>{{this.doctorName}}</td>
+        <td>{{this.symptoms}}</td>
+        <td>{{this.status}}</td>
+        <td>{{this.waitTime}}</td>
+        <td><button data-aptid="{{this.id}}" id="{{this.id}}">Check-In</button></td>
+        <td><button>Cancel</button></td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
+
+<script>
+      $('#appointments').click(function(e) {  
+      var thisApt = e.target.dataset.aptid
+      let method = 'GET';
+      let endpoint = `request url /patient/appointments/call`;
+
+      xhr.open(method, endpoint);
+      xhr.send();
+
+      
+    });
+</script>
+{{!-- 
+  let method = 'GET';
+  let endpoint = `request url ${input.value}`;
+
+  xhr.open(method, endpoint);
+  xhr.send(); //if in the link what you looking for this send will be empty!!! --}}
