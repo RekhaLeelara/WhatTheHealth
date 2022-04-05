@@ -70,7 +70,8 @@ router.get('/patient/prescriptions', async (req, res) => {
 
   
 router.get('/patient/appointments/call', async (req, res) => {
-  res.render('patient-video-call', {roomID: 1});
+  // here: need to find out which waiting room id is available?
+  res.render('waiting-room', {roomID: 1});
 });
 
 
