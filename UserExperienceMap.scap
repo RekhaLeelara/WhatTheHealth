@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.2" ID="0FE2530F-6012-47C6-BFCE-C2DE4AC01C67">
+    <Notes>
+        <Note ID="0" FontSize="12.0" Position="147.242188,356.980469" Width="85.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>landing page</String>
+            <ConnectedNoteIDs>1, 5</ConnectedNoteIDs>
+        </Note>
+        <Note ID="1" FontSize="12.0" Position="213.765625,259.363281" Width="89.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>signup button</String>
+            <ConnectedNoteIDs>0, 2</ConnectedNoteIDs>
+            <PointsToNoteIDs>2</PointsToNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="301.960938,181.925781" Width="106.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>registration page</String>
+            <ConnectedNoteIDs>1, 49</ConnectedNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="96.699219,553.058594" Width="42.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>login</String>
+            <ConnectedNoteIDs>0, 51</ConnectedNoteIDs>
+            <PointsToNoteIDs>51</PointsToNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="436.660156,272.511719" Width="80.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>doctor page</String>
+            <ConnectedNoteIDs>8-10, 12-13, 43, 56</ConnectedNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="286.824219,1036.789062" Width="83.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>patient page</String>
+            <ConnectedNoteIDs>20-24, 44, 54</ConnectedNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="560.859375,376.527344" Width="79.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>prescription</String>
+            <ConnectedNoteIDs>6, 17</ConnectedNoteIDs>
+            <PointsToNoteIDs>17</PointsToNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="569.875,326.082031" Width="89.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>appointments</String>
+            <ConnectedNoteIDs>6, 14</ConnectedNoteIDs>
+            <PointsToNoteIDs>14</PointsToNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="561.257812,417.957031" Width="67.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.87775 0.828268 0.562122</Border>
+                <Fill>0.975278 0.920298 0.62458</Fill>
+            </Appearance>
+            <String>reference</String>
+            <ConnectedNoteIDs>6</ConnectedNoteIDs>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="104.84375,98.671875" Width="133.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.87775 0.828268 0.562122</Border>
+                <Fill>0.975278 0.920298 0.62458</Fill>
+            </Appearance>
+            <String>2.0 (not implemented)</String>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="468.007812,445.0" Width="63.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.87775 0.828268 0.562122</Border>
+                <Fill>0.975278 0.920298 0.62458</Fill>
+            </Appearance>
+            <String>earnings</String>
+            <ConnectedNoteIDs>6</ConnectedNoteIDs>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="521.4375,472.980469" Width="73.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.87775 0.828268 0.562122</Border>
+                <Fill>0.975278 0.920298 0.62458</Fill>
+            </Appearance>
+            <String>dashboard</String>
+            <ConnectedNoteIDs>6</ConnectedNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="714.710938,315.222656" Width="119.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>appointments page</String>
+            <ConnectedNoteIDs>9, 15, 57</ConnectedNoteIDs>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="889.148438,310.152344" Width="109.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>start appointment</String>
+            <ConnectedNoteIDs>14, 16</ConnectedNoteIDs>
+            <PointsToNoteIDs>16</PointsToNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="2033.285156,247.894531" Width="67.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>video call</String>
+            <ConnectedNoteIDs>15, 41-42</ConnectedNoteIDs>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="745.417969,365.785156" Width="97.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>writing a prescription page</String>
+            <ConnectedNoteIDs>8, 18</ConnectedNoteIDs>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="871.027344,373.351562" Width="125.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>fields for data, then when done enters into prescriptions table</String>
+            <ConnectedNoteIDs>17, 47</ConnectedNoteIDs>
+            <PointsToNoteIDs>47</PointsToNoteIDs>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="445.546875,687.34375" Width="85.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>prescriptions</String>
+            <ConnectedNoteIDs>7, 47</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="562.980469,887.765625" Width="112.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>book appointment</String>
+            <ConnectedNoteIDs>7, 28</ConnectedNoteIDs>
+            <PointsToNoteIDs>28</PointsToNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="12.0" Position="472.996094,804.859375" Width="63.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>calendar</String>
+            <ConnectedNoteIDs>7, 32</ConnectedNoteIDs>
+            <PointsToNoteIDs>32</PointsToNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="403.722656,1101.417969" Width="73.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.87775 0.828268 0.562122</Border>
+                <Fill>0.975278 0.920298 0.62458</Fill>
+            </Appearance>
+            <String>dashboard</String>
+            <ConnectedNoteIDs>7</ConnectedNoteIDs>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="417.808594,1066.914062" Width="69.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.87775 0.828268 0.562122</Border>
+                <Fill>0.975278 0.920298 0.62458</Fill>
+            </Appearance>
+            <String>my profile</String>
+            <ConnectedNoteIDs>7</ConnectedNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="118.644531,126.492188" Width="35.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>link</String>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="118.644531,154.492188" Width="43.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>page</String>
+        </Note>
+        <Note ID="27" FontSize="12.0" Position="115.367188,453.582031" Width="79.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>login button</String>
+        </Note>
+        <Note ID="28" FontSize="12.0" Position="901.691406,859.792969" Width="148.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>book appointments page</String>
+            <ConnectedNoteIDs>21, 29</ConnectedNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="1127.738281,831.566406" Width="83.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>click to book</String>
+            <ConnectedNoteIDs>28, 30, 58</ConnectedNoteIDs>
+            <PointsToNoteIDs>30, 58</PointsToNoteIDs>
+        </Note>
+        <Note ID="30" FontSize="12.0" Position="1264.273438,829.550781" Width="109.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>confirmation alert</String>
+            <ConnectedNoteIDs>29, 31</ConnectedNoteIDs>
+        </Note>
+        <Note ID="31" FontSize="12.0" Position="1424.15625,839.046875" Width="67.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>press OK</String>
+            <ConnectedNoteIDs>30, 32</ConnectedNoteIDs>
+            <PointsToNoteIDs>32</PointsToNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="1278.980469,575.242188" Width="132.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>patient calendar page</String>
+            <ConnectedNoteIDs>22, 31, 33-34, 58</ConnectedNoteIDs>
+        </Note>
+        <Note ID="33" FontSize="12.0" Position="1475.808594,473.425781" Width="51.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>cancel</String>
+            <ConnectedNoteIDs>32, 36</ConnectedNoteIDs>
+            <PointsToNoteIDs>36</PointsToNoteIDs>
+        </Note>
+        <Note ID="34" FontSize="12.0" Position="1477.542969,601.0625" Width="61.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>check-in</String>
+            <ConnectedNoteIDs>32, 40</ConnectedNoteIDs>
+            <PointsToNoteIDs>40</PointsToNoteIDs>
+        </Note>
+        <Note ID="35" FontSize="12.0" Position="1793.046875,360.460938" Width="183.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>mark appointment as cancelled</String>
+            <ConnectedNoteIDs>37</ConnectedNoteIDs>
+        </Note>
+        <Note ID="36" FontSize="12.0" Position="1576.972656,427.175781" Width="90.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>are you sure?</String>
+            <ConnectedNoteIDs>33, 37-38</ConnectedNoteIDs>
+        </Note>
+        <Note ID="37" FontSize="12.0" Position="1703.332031,380.15625" Width="35.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>yes</String>
+            <ConnectedNoteIDs>35-36</ConnectedNoteIDs>
+        </Note>
+        <Note ID="38" FontSize="12.0" Position="1722.179688,453.332031" Width="30.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>no</String>
+            <ConnectedNoteIDs>36, 39</ConnectedNoteIDs>
+        </Note>
+        <Note ID="39" FontSize="12.0" Position="1794.910156,472.585938" Width="107.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>return/do nothing</String>
+            <ConnectedNoteIDs>38</ConnectedNoteIDs>
+        </Note>
+        <Note ID="40" FontSize="12.0" Position="1661.933594,646.070312" Width="85.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.669411 0.885244 0.567003</Border>
+                <Fill>0.74379 0.983605 0.630003</Fill>
+            </Appearance>
+            <String>waiting room</String>
+            <ConnectedNoteIDs>34, 41, 59</ConnectedNoteIDs>
+        </Note>
+        <Note ID="41" FontSize="12.0" Position="1929.253906,616.726562" Width="112.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>(doctor starts call)</String>
+            <ConnectedNoteIDs>16, 40</ConnectedNoteIDs>
+            <PointsToNoteIDs>16</PointsToNoteIDs>
+        </Note>
+        <Note ID="42" FontSize="12.0" Position="2403.382812,346.722656" Width="58.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.668968 0.810267 0.895084</Border>
+                <Fill>0.743297 0.900297 0.994538</Fill>
+            </Appearance>
+            <String>end call</String>
+            <ConnectedNoteIDs>16, 43-44, 46</ConnectedNoteIDs>
+        </Note>
+        <Note ID="43" FontSize="12.0" Position="2274.21875,6.960938" Width="50.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>doctor</String>
+            <ConnectedNoteIDs>6, 42</ConnectedNoteIDs>
+            <PointsToNoteIDs>6</PointsToNoteIDs>
+        </Note>
+        <Note ID="44" FontSize="12.0" Position="2403.0,892.0" Width="53.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>patient</String>
+            <ConnectedNoteIDs>7, 42</ConnectedNoteIDs>
+            <PointsToNoteIDs>7</PointsToNoteIDs>
+        </Note>
+        <Note ID="46" FontSize="12.0" Position="2526.726562,317.085938" Width="132.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>videoRoomID is freed</String>
+            <ConnectedNoteIDs>42</ConnectedNoteIDs>
+        </Note>
+        <Note ID="47" FontSize="12.0" Position="708.0,586.0" Width="147.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>prescriptions table in DB</String>
+            <ConnectedNoteIDs>18, 20</ConnectedNoteIDs>
+            <PointsToNoteIDs>20</PointsToNoteIDs>
+        </Note>
+        <Note ID="48" FontSize="12.0" Position="109.226562,75.5" Width="93.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>database data</String>
+            <PointsToNoteIDs>0</PointsToNoteIDs>
+        </Note>
+        <Note ID="49" FontSize="12.0" Position="431.171875,95.21875" Width="67.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>user data</String>
+            <ConnectedNoteIDs>2, 50</ConnectedNoteIDs>
+        </Note>
+        <Note ID="50" FontSize="12.0" Position="551.429688,60.304688" Width="69.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>user table</String>
+            <ConnectedNoteIDs>49</ConnectedNoteIDs>
+        </Note>
+        <Note ID="51" FontSize="12.0" Position="150.519531,638.164062" Width="69.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>user table</String>
+            <ConnectedNoteIDs>5, 52-53</ConnectedNoteIDs>
+        </Note>
+        <Note ID="52" FontSize="12.0" Position="8.964844,746.085938" Width="155.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>authentication (user/pass)</String>
+            <ConnectedNoteIDs>51</ConnectedNoteIDs>
+        </Note>
+        <Note ID="53" FontSize="12.0" Position="221.328125,701.6875" Width="63.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>usertype</String>
+            <ConnectedNoteIDs>51, 54, 56</ConnectedNoteIDs>
+            <PointsToNoteIDs>54, 56</PointsToNoteIDs>
+        </Note>
+        <Note ID="54" FontSize="12.0" Position="290.699219,757.988281" Width="53.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>patient</String>
+            <ConnectedNoteIDs>7, 53</ConnectedNoteIDs>
+            <PointsToNoteIDs>7</PointsToNoteIDs>
+        </Note>
+        <Note ID="56" FontSize="12.0" Position="295.699219,614.429688" Width="50.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>doctor</String>
+            <ConnectedNoteIDs>6, 53</ConnectedNoteIDs>
+            <PointsToNoteIDs>6</PointsToNoteIDs>
+        </Note>
+        <Note ID="57" FontSize="12.0" Position="747.0,261.0" Width="121.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>table: appointments</String>
+            <ConnectedNoteIDs>14</ConnectedNoteIDs>
+        </Note>
+        <Note ID="58" FontSize="12.0" Position="1121.28125,533.542969" Width="121.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>table: appointments</String>
+            <ConnectedNoteIDs>29, 32</ConnectedNoteIDs>
+        </Note>
+        <Note ID="59" FontSize="12.0" Position="1651.789062,720.289062" Width="121.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.894548 0.707752 0.715898</Border>
+                <Fill>0.993942 0.786391 0.795442</Fill>
+            </Appearance>
+            <String>table: appointments</String>
+            <ConnectedNoteIDs>40</ConnectedNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <Stacks>
+        <Stack>25-26</Stack>
+    </Stacks>
+    <AutoFit>0-2, 5-16, 20-44, 46-54, 56-59</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="B02D6584-6934-42DE-AB5F-26180209B7C5" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.668968 0.810267 0.895084</BorderColor>
+            <FillColor>0.743297 0.900297 0.994538</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="566ECBD8-72E5-4F49-BBE1-A8EC06B70342" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.669411 0.885244 0.567003</BorderColor>
+            <FillColor>0.74379 0.983605 0.630003</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="2FEC8668-D87F-4CBA-A490-CCA5CDFFA322" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.894548 0.707752 0.715898</BorderColor>
+            <FillColor>0.989117 0.814091 0.999474</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="FA5EF053-44DF-4418-B7EE-BF5EA162F6DF" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.894548 0.707752 0.715898</BorderColor>
+            <FillColor>0.993942 0.786391 0.795442</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="CBC6E624-A3FC-480A-B71B-AE4DB8DC8313" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.87775 0.828268 0.562122</BorderColor>
+            <FillColor>0.975278 0.920298 0.62458</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="E268B77C-145E-422A-8F1A-2F6C476B8DB7" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="0C02D6A8-0EC2-4206-BF96-248255AC2253" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <NoteXPadding>8.0</NoteXPadding>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
