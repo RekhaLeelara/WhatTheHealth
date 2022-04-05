@@ -69,9 +69,11 @@ router.get('/patient/prescriptions', async (req, res) => {
 });
 
   
-router.get('/patient/appointments/call', async (req, res) => {
+router.get('/patient/appointments/call/:roomID', async (req, res) => {
   // here: need to find out which waiting room id is available?
-  res.render('waiting-room', {roomID: 1});
+  // get room ID
+  roomID = req.params.roomID
+  res.render('waiting-room', {roomID: roomID});
 });
 
 
