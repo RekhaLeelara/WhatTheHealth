@@ -79,21 +79,21 @@ router.get('/patient/bookAppointments/book-appointment', async (req, res) => {
 const BookAppointment = require('../models/Booking');
 
 // POST /api/users
-router.post('bookAppointments/book-appointment', (req, res) => {
-  console.log("posted successfully");
-  BookAppointment.create({
-    username: req.session.username,
-    appointmentID: uuidv4(),
-    doctorName: req.body.doctorName,
-    date: req.body.date,
-    time: req.body.time,
-    symptoms: req.body.symptoms
-  })
-  .then(dbUserData => {
+// router.post('bookAppointments/book-appointment', (req, res) => {
+//   console.log("posted successfully");
+//   BookAppointment.create({
+//     username: req.session.username,
+//     appointmentID: uuidv4(),
+//     doctorName: req.body.doctorName,
+//     date: req.body.date,
+//     time: req.body.time,
+//     symptoms: req.body.symptoms
+//   })
+//   .then(dbUserData => {
 
 
-  });
-});
+//   });
+// });
 
 router.post('/patient/bookAppointments/book-appointment', (req, res) => {
   console.log("posted successfully");
