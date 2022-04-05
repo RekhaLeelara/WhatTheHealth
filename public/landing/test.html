@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Foundation 实例</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
-  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
-  <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 轮播（Carousel）插件的标题</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body style="padding:20px">
+<body>
 
-<h2>可折叠实例</h2>
-<ul class="accordion" data-accordion>
-  <li class="accordion-navigation">
-    <a href="#demo">简单的可折叠实例</a>
-    <div id="demo" class="content">
-     菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+  
+    <div class="row clearfix">
+      <div class="col-md-12">
+        <div class="carousel slide" id="carousel-533979">
+          <ol class="carousel-indicators">
+            <li data-slide-to="0" data-target="#carousel-533979">
+            </li>
+            <li data-slide-to="1" data-target="#carousel-533979" class="active">
+            </li>
+            <li data-slide-to="2" data-target="#carousel-533979">
+            </li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item">
+              <img alt="" src="./assets/img/test1.jpg" />
+              <div class="carousel-caption">
+                <h4>
+                  First Thumbnail label
+                </h4>
+                <p>
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+              </div>
+            </div>
+            <div class="item active">
+              <img alt="" src="./assets/img/test2.jpg" />
+              <div class="carousel-caption">
+                <h4>
+                  Second Thumbnail label
+                </h4>
+                <p>
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <img alt="" src="./assets/img/test3.jpg" />
+              <div class="carousel-caption">
+                <h4>
+                  Third Thumbnail label
+                </h4>
+                <p>
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+              </div>
+            </div>
+          </div> <a class="left carousel-control" href="#carousel-533979" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-533979" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+      </div>
     </div>
-  </li>
-</ul>
-
-<!-- 初始化 Foundation JS -->
-<script>
-$(document).ready(function() {
-    $(document).foundation();
-})
-</script>
+  
 
 </body>
 </html>
