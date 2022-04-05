@@ -1,5 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatTheHealth</title>
+    <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <div class="main ui stackable grid container">
 
-<script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+    <div class="ui container sixteen wide column">
+        <div class="ui raised teal segment">
+            <div class="row">
+                <h1 class="ui header">
+                     {{!-- {{#each patient}} --}} Welcome  {{this.patient}}  {{!-- {{/each}} --}}
+                    <a href="/">
+                        <div id="logout" class="ui basic button">Log Out</div>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+  </head>
+  <body>
+
+    <!-- Start Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Patient View</li>
+          
+        </ul>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+
+
+    
+
+    <div class="row column text-center">
+      <h2>Waiting Room</h2>
+      <hr>
+    </div>
+
+    <div class="row small-up-3 large-up-3">
+      <div class="column">
+       
+        <h5> Patients Ahead </h5>
+        <i class="fa-solid fa-business-time"></i>
+        <p>4</p>
+        
+      </div>
+      <div class="column">
+        <i class="fa-solid fa-timer"></i>
+        <h5>Total Wait Time</h5>
+        <p>50 minutes</p>
+        
+      </div>
+      <div class="column">
+        <i class="fa-solid fa-business-time"></i>
+        <h5>Your Wait Time</h5>
+        <p>6 minutes</p>
+        
+      </div>
+      
+    </div>
+ 
+    <hr>
+    <a href="#" class="button expanded">Back to Home</a>
+    
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+
+
 {{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
 <input type="hidden" id="roomID" value={{roomID}}>
 
