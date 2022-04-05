@@ -39,22 +39,22 @@
             <ConnectedNoteIDs>0, 51</ConnectedNoteIDs>
             <PointsToNoteIDs>51</PointsToNoteIDs>
         </Note>
-        <Note ID="6" FontSize="12.0" Position="436.660156,272.511719" Width="80.0">
+        <Note ID="6" FontSize="12.0" Position="437.0,273.0" Width="53.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1">0.669411 0.885244 0.567003</Border>
                 <Fill>0.74379 0.983605 0.630003</Fill>
             </Appearance>
-            <String>doctor page</String>
+            <String>/doctor</String>
             <ConnectedNoteIDs>8-10, 12-13, 43, 56</ConnectedNoteIDs>
         </Note>
-        <Note ID="7" FontSize="12.0" Position="286.824219,1036.789062" Width="83.0">
+        <Note ID="7" FontSize="12.0" Position="287.0,1037.0" Width="56.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1">0.669411 0.885244 0.567003</Border>
                 <Fill>0.74379 0.983605 0.630003</Fill>
             </Appearance>
-            <String>patient page</String>
+            <String>/patient</String>
             <ConnectedNoteIDs>20-24, 44, 54</ConnectedNoteIDs>
         </Note>
         <Note ID="8" FontSize="12.0" Position="560.859375,376.527344" Width="79.0">
@@ -112,14 +112,14 @@
             <String>dashboard</String>
             <ConnectedNoteIDs>6</ConnectedNoteIDs>
         </Note>
-        <Note ID="14" FontSize="12.0" Position="714.710938,315.222656" Width="119.0">
+        <Note ID="14" FontSize="12.0" Position="715.0,315.0" Width="129.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1">0.669411 0.885244 0.567003</Border>
                 <Fill>0.74379 0.983605 0.630003</Fill>
             </Appearance>
-            <String>appointments page</String>
-            <ConnectedNoteIDs>9, 15, 57</ConnectedNoteIDs>
+            <String>/doctor/appointments</String>
+            <ConnectedNoteIDs>9, 15, 57, 63</ConnectedNoteIDs>
         </Note>
         <Note ID="15" FontSize="12.0" Position="889.148438,310.152344" Width="109.0">
             <Appearance>
@@ -131,14 +131,14 @@
             <ConnectedNoteIDs>14, 16</ConnectedNoteIDs>
             <PointsToNoteIDs>16</PointsToNoteIDs>
         </Note>
-        <Note ID="16" FontSize="12.0" Position="2033.285156,247.894531" Width="67.0">
+        <Note ID="16" FontSize="12.0" Position="2033.0,248.0" Width="193.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1">0.669411 0.885244 0.567003</Border>
                 <Fill>0.74379 0.983605 0.630003</Fill>
             </Appearance>
-            <String>video call</String>
-            <ConnectedNoteIDs>15, 40, 42</ConnectedNoteIDs>
+            <String>doctor/appointments/call/:roomID</String>
+            <ConnectedNoteIDs>15, 40, 42, 62</ConnectedNoteIDs>
         </Note>
         <Note ID="17" FontSize="12.0" Position="745.417969,365.785156" Width="97.0">
             <Appearance>
@@ -330,14 +330,14 @@
             <String>return/do nothing</String>
             <ConnectedNoteIDs>38</ConnectedNoteIDs>
         </Note>
-        <Note ID="40" FontSize="12.0" Position="1892.097656,651.15625" Width="85.0">
+        <Note ID="40" FontSize="12.0" Position="1892.0,651.0" Width="195.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1">0.669411 0.885244 0.567003</Border>
                 <Fill>0.74379 0.983605 0.630003</Fill>
             </Appearance>
-            <String>waiting room</String>
-            <ConnectedNoteIDs>16, 34, 59</ConnectedNoteIDs>
+            <String>patient/appointments/call/:roomID</String>
+            <ConnectedNoteIDs>16, 34, 59, 61</ConnectedNoteIDs>
         </Note>
         <Note ID="42" FontSize="12.0" Position="2403.382812,346.722656" Width="58.0">
             <Appearance>
@@ -483,6 +483,27 @@
             <String>table: appointments</String>
             <ConnectedNoteIDs>40</ConnectedNoteIDs>
         </Note>
+        <Note ID="61" FontSize="12.0" Position="2035.0,683.0" Width="108.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>waiting-room.hbs</String>
+            <ConnectedNoteIDs>40</ConnectedNoteIDs>
+        </Note>
+        <Note ID="62" FontSize="12.0" Position="2065.0,191.0" Width="95.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>doctor-call.hbs</String>
+            <ConnectedNoteIDs>16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="63" FontSize="12.0" Position="877.0,258.0" Width="149.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>doctor-appointments.hbs</String>
+            <ConnectedNoteIDs>14</ConnectedNoteIDs>
+        </Note>
     </Notes>
     <BackgroundShapes></BackgroundShapes>
     <Stacks>
@@ -492,7 +513,7 @@
         <Label IDs="16,40">patient sees call even before doctor starts</Label>
         <Label IDs="15,16">doctor joins patient in video call</Label>
     </Labels>
-    <AutoFit>0-2, 5-16, 20-40, 42-44, 46-54, 56-59</AutoFit>
+    <AutoFit>0-2, 5-16, 20-40, 42-44, 46-54, 56-59, 61-63</AutoFit>
     <NoteStyles>
         <Style Name="Bubble (Blue)" ID="B02D6584-6934-42DE-AB5F-26180209B7C5" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
             <BorderThickness>1</BorderThickness>
