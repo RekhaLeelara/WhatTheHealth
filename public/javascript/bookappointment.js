@@ -4,7 +4,7 @@ async function signupFormHandler(e) {
         var time = e.target.dataset.timeslot
         var date = e.target.dataset.date
         var doctorName = e.target.dataset.doctor
-        var date = new Date()
+    
         var symptoms = 'broken leg'
         
         aptEntry = JSON.stringify({
@@ -20,7 +20,7 @@ async function signupFormHandler(e) {
         alert(`Your Appointment with ${doctorName} at ${time} has been booked successfully!`);
 
 
-        fetch('bookAppointment', {
+        fetch('book-appointment', {
             method: 'post',
             body: aptEntry,
             

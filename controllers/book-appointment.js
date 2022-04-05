@@ -71,4 +71,26 @@ router.get('/patient/bookAppointments/time', async (req, res) => {
 });
 
 
+
+// book a new appointment
+const BookAppointment = require('../models/Booking');
+
+// POST /api/users
+router.post('book-appointment', (req, res) => {
+  console.log("posted successfully");
+  User.create({
+    username: req.session.username,
+    appointmentID: uuidv4(),
+    doctorName: req.body.doctorName,
+    date: req.body.date,
+    time: req.body.time,
+    symptoms: req.body.symptoms
+  })
+  .then(dbUserData => {
+
+
+  });
+});
+
+
 module.exports = router;
