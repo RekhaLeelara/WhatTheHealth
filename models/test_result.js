@@ -5,7 +5,7 @@ module.exports = function(sequelize,DataTypes){
             allowNull: false,
         }
     },
-    {
+    
     patientID: {
         type: DataTypes.INTEGER,
         allowNull: false
@@ -33,4 +33,4 @@ TestResult.associate = (models)=> {
     })
 }
 
-return TestResult; 
+return TestResult;

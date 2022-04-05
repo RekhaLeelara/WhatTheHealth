@@ -1,0 +1,12 @@
+{
+  "appointments": [
+    {
+      "date": "",
+      "time": "",
+      "doctorName": "Obi-Wan",
+      "symptoms": "",
+      "status": "",
+      "waitTime": ""
+    }
+  ]
+}
