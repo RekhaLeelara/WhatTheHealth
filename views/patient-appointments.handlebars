@@ -33,7 +33,7 @@
             </ul>
           </div>          
           <div class="medium-8 columns" style="background-color:#f1f1f1;">      
-<h1>Patient Appointments</h1>
+<h1>Patient Calendar</h1>
 <div class="appointments" id="appointments">
   <table class="patient-appointments .table">
     <tr>
@@ -62,14 +62,9 @@
 
 <script>
       $('#appointments').click(function(e) {  
-      var thisApt = e.target.dataset.aptid
-      let method = 'GET';
-      let endpoint = `request url /patient/appointments/call`;
-
-      xhr.open(method, endpoint);
-      xhr.send();
-
-      
+        var url = '/patient/appointments/call/' + e.target.dataset.aptid
+        document.location.replace(url);
+        
     });
 </script>
 {{!-- 
