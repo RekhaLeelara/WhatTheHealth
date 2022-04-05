@@ -138,7 +138,7 @@
                 <Fill>0.74379 0.983605 0.630003</Fill>
             </Appearance>
             <String>video call</String>
-            <ConnectedNoteIDs>15, 41-42</ConnectedNoteIDs>
+            <ConnectedNoteIDs>15, 40, 42</ConnectedNoteIDs>
         </Note>
         <Note ID="17" FontSize="12.0" Position="745.417969,365.785156" Width="97.0">
             <Appearance>
@@ -330,22 +330,14 @@
             <String>return/do nothing</String>
             <ConnectedNoteIDs>38</ConnectedNoteIDs>
         </Note>
-        <Note ID="40" FontSize="12.0" Position="1661.933594,646.070312" Width="85.0">
+        <Note ID="40" FontSize="12.0" Position="1892.097656,651.15625" Width="85.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1">0.669411 0.885244 0.567003</Border>
                 <Fill>0.74379 0.983605 0.630003</Fill>
             </Appearance>
             <String>waiting room</String>
-            <ConnectedNoteIDs>34, 41, 59</ConnectedNoteIDs>
-        </Note>
-        <Note ID="41" FontSize="12.0" Position="1929.253906,616.726562" Width="112.0">
-            <Appearance>
-                <Alignment>Left</Alignment>
-            </Appearance>
-            <String>(doctor starts call)</String>
-            <ConnectedNoteIDs>16, 40</ConnectedNoteIDs>
-            <PointsToNoteIDs>16</PointsToNoteIDs>
+            <ConnectedNoteIDs>16, 34, 59</ConnectedNoteIDs>
         </Note>
         <Note ID="42" FontSize="12.0" Position="2403.382812,346.722656" Width="58.0">
             <Appearance>
@@ -482,7 +474,7 @@
             <String>table: appointments</String>
             <ConnectedNoteIDs>29, 32</ConnectedNoteIDs>
         </Note>
-        <Note ID="59" FontSize="12.0" Position="1651.789062,720.289062" Width="121.0">
+        <Note ID="59" FontSize="12.0" Position="1860.433594,713.214844" Width="121.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1">0.894548 0.707752 0.715898</Border>
@@ -496,7 +488,11 @@
     <Stacks>
         <Stack>25-26</Stack>
     </Stacks>
-    <AutoFit>0-2, 5-16, 20-44, 46-54, 56-59</AutoFit>
+    <Labels>
+        <Label IDs="16,40">patient sees call even before doctor starts</Label>
+        <Label IDs="15,16">doctor joins patient in video call</Label>
+    </Labels>
+    <AutoFit>0-2, 5-16, 20-40, 42-44, 46-54, 56-59</AutoFit>
     <NoteStyles>
         <Style Name="Bubble (Blue)" ID="B02D6584-6934-42DE-AB5F-26180209B7C5" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
             <BorderThickness>1</BorderThickness>
