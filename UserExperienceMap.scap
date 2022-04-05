@@ -182,7 +182,7 @@
                 <Border Weight="1">0.668968 0.810267 0.895084</Border>
                 <Fill>0.743297 0.900297 0.994538</Fill>
             </Appearance>
-            <String>calendar</String>
+            <String>Appointments</String>
             <ConnectedNoteIDs>7, 32</ConnectedNoteIDs>
             <PointsToNoteIDs>32</PointsToNoteIDs>
         </Note>
@@ -272,7 +272,7 @@
                 <Border Weight="1">0.669411 0.885244 0.567003</Border>
                 <Fill>0.74379 0.983605 0.630003</Fill>
             </Appearance>
-            <String>patient calendar page</String>
+            <String>patient Appointments page</String>
             <ConnectedNoteIDs>22, 31, 33-34, 58</ConnectedNoteIDs>
         </Note>
         <Note ID="33" FontSize="12.0" Position="1475.808594,473.425781" Width="51.0">

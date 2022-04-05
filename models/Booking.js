@@ -25,11 +25,11 @@ Booking.init(
           allowNull: false
         },        
         // define a username column
-        username: {
+        patientID: {
           type: DataTypes.STRING,
           allowNull: false
         },
-        doctorName: {
+        doctorID: {
           type: DataTypes.STRING,
           allowNull: false
         },
@@ -48,10 +48,10 @@ Booking.init(
           type: DataTypes.STRING,
           allowNull: true,
         },
-        checkedIn:{
-          type: DataTypes.STRING,
-          allowNull: true
-        }
+        // checkedIn:{
+        //   type: DataTypes.STRING,
+        //   allowNull: true
+        // }
 
       },
   {
