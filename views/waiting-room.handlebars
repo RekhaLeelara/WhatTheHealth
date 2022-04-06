@@ -1,16 +1,4 @@
-{{!-- <!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     
-    <title>WhatTheHealth</title>
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <div class="main ui stackable grid container"> --}}
 
-   
-  {{!-- </head>
-  <body> --}}
 <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
 
     <!-- Start Top Bar -->
@@ -36,31 +24,24 @@
       </div>
     </div>
     <!-- End Top Bar -->
-
-
-    
-
-    
- 
-    
-    
-
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-    <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
-<div class="medium-4 columns" style="background-color:#f1f1f1;">
-  <ul class="side-nav">
-    <li class="active"><a href="#">Appointments</a></li>
-    <li><a href="#">Prescription</a></li>
-    <li><a href="#">Patient Search</a></li>
-    <li><a href="#">Reference</a></li>
-    <li><a href="#">Earning</a></li>    
-    <li><a href="#">Dashboard</a></li>
+  <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script> 
+<div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
+  <ul class="side-nav" >
+    <li><a data-link="appointments" >Appointments</a></li>
+    <li><a data-link="prescriptions">Prescriptions</a></li>
+    <li><a data-link="bookappointments" class="active">Book Appointment</a></li>
+    {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
+    <li><a data-link="">My Profile</a></li>   
   </ul>
-</div>          
+</div>   
+<script>
+      $('#links').click(function(e) {  
+          console.log(e)
+        var url = '/patient/' + e.target.dataset.link
+        console.log(url)
+        document.location.replace(url);
+    });
+</script>       
 <div class="medium-8 columns" style="background-color:#f1f1f1;"> 
   <div class="row column text-center">
       <h2>Waiting Room</h2>
@@ -108,8 +89,6 @@
     });
     callFrame.join({ url: roomURL });
     // Prompting for room name:
-
-
   </script>
   </div>
     
