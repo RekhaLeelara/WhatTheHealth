@@ -6,13 +6,16 @@
 
 <div align= center>
   <script>
+    // get window url
+    var roomID = window.location.href.split('?')[1].split('=')[1]
+
     // var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
-    var roomURL = 'https://allhands.daily.co/CheckupRoom1'
+    var roomURL = 'https://allhands.daily.co/CheckupRoom' + roomID
     callFrame = window.DailyIframe.createFrame({
       showLeaveButton: true,
       iframeStyle: {
-        width: '50%',
-        height: '50%',
+        width: '100%',
+        height: '100%',
       }
     });
     callFrame.join({ url: roomURL });

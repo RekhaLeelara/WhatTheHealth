@@ -36,7 +36,7 @@
         <td>{{this.symptoms}}</td>
         <td>{{this.status}}</td>
         <td>{{this.waitTime}}</td>
-        <td><button data-targ="theButton" data-aptid="{{this.id}}" id="{{this.id}}">Check-In</button></td>
+        <td><button data-targ="theButton" data-aptid="{{this.patientID}}" id="{{this.id}}">Check-In</button></td>
         <td><button>Cancel</button></td>
       </tr>
     {{/each}}
@@ -44,23 +44,20 @@
 </div>
 
 <script>
-      $('#appointments').click(function(e) {  
-        if(e.target.dataset.targ === 'theButton'){
-          console.log(e)
-          var url = window.location.origin + '/videoCall.html'
-          var win = window.open(url, '_blank');
-          if (win) {
-              //Browser has allowed it to be opened
-              win.focus();
-              var url = '/patient/appointments/call/' + e.target.dataset.aptid
-              //document.location.replace(url);
-          } else {
-              //Browser has blocked it
-              alert('Please allow popups for this website in order to access the call');
-          }
-        }
-        
-
-
-    });
+  $('#appointments').click(function(e) {  
+    if(e.target.dataset.targ === 'theButton'){
+      console.log(e)
+      var url = window.location.origin + '/videoCall.html?id=' + e.target.dataset.aptid
+      var win = window.open(url, '_blank');
+      if (win) {
+        //Browser has allowed it to be opened
+        win.focus();
+        var url = '/patient/appointments/waitingroom'
+        document.location.replace(url);
+      } else {
+        //Browser has blocked it
+        alert('Please allow popups for this website in order to access the call');
+      }
+    }
+});
 </script>
