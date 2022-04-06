@@ -1,0 +1,41 @@
+<div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
+  <ul class="side-nav" >
+    <li><a data-link="appointments" >Appointments</a></li>
+    <li><a data-link="prescription">Prescription</a></li>
+    <li><a data-link="" class="active">Dashboard</a></li>
+    <li><a data-link="">Reference</a></li> 
+    <li><a data-link="">Payroll</a></li>    
+    {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
+    <li><a data-link="">My Profile</a></li>   
+  </ul>
+</div>   
+<script>
+      $('#links').click(function(e) {  
+          console.log(e)
+        var url = '/doctor/' + e.target.dataset.link
+        console.log(url)
+        document.location.replace(url);
+    });
+</script> 
+<div class="medium-8 columns" style="background-color:#f1f1f1;">
+    
+  <h1>Appointment</h1>
+  <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+  {{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
+  <input type="hidden" id="roomID" value={{roomID}}>
+
+
+  <script>
+    var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
+    callFrame = window.DailyIframe.createFrame({
+      showLeaveButton: true,
+      iframeStyle: {
+        width: '50%',
+        height: '50%',
+      }
+    });
+    callFrame.join({ url: roomURL });
+    // Prompting for room name:
+  </script>
+
+</div>  

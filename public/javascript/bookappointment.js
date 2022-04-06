@@ -1,6 +1,5 @@
 async function signupFormHandler(e) {
-    
-        console.log(e)
+
         var time = e.target.dataset.timeslot
         var date = e.target.dataset.date
         var doctorName = e.target.dataset.doctor
@@ -14,12 +13,7 @@ async function signupFormHandler(e) {
                 time,
                 symptoms
             })
-        console.log(aptEntry)
-        //var url = '/patient/appointments/call/' + e.target.dataset.aptid
-        // document.location.replace(url);
-        alert(`Your Appointment with ${doctorName} at ${time} has been booked successfully!`);
-
-
+        
         fetch('book-appointment', {
             method: 'post',
             body: aptEntry,
@@ -27,7 +21,8 @@ async function signupFormHandler(e) {
             headers: { "Content-Type": "application/json" }
         })
         .then(function(){
-            // document.location.replace('/');
+            document.location.replace('/patient/appointments');
+            alert(`Your Appointment with ${doctorName} on ${date} at ${time} has been booked successfully!`);
         })
         .catch(function(error){
             console.log("error!!");
