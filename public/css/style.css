@@ -163,3 +163,8 @@ nav {
   align-content: flex-start;
   align-items: center;
 }
+
+#parent {
+  width: 30%;
+  margin: 0 auto;
+}

@@ -12,8 +12,7 @@ router.post('/login', (req, res) => {
         username: req.body.username
       }
     }).then(dbUserData => {
-
-        console.log("flushing the login data: "+dbUserData);
+        console.log("spitting out login data"+dbUserData);
       if (!dbUserData) {
         res.status(400).json({ message: 'No user with that username!' });
         return;

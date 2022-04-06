@@ -1,33 +1,95 @@
-<div class="medium-4 columns" style="background-color:#f1f1f1;">
-  <ul class="side-nav">
-    <li class="active"><a href="#">Calendar</a></li>
-    <li><a href="#">Prescription</a></li>
-    <li><a href="#">Patient Search</a></li>
-    <li><a href="#">Reference</a></li>
-    <li><a href="#">Earning</a></li>    
-    <li><a href="#">Dashboard</a></li>
-  </ul>
-</div>          
-<div class="medium-8 columns" style="background-color:#f1f1f1;">      
 
 <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+
+    <!-- Start Top Bar -->
+     <div class="ui container sixteen wide column">
+        <div class="ui raised teal segment">
+            <div class="row">
+                <h1 class="ui header">
+                     {{!-- {{#each patient}} --}} Welcome  {{this.patient}}  {{!-- {{/each}} --}}
+                    <a href="/">
+                        <div id="logout" class="ui basic button">Log Out</div>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Patient View</li>
+          
+        </ul>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+  <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script> 
+<div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
+  <ul class="side-nav" >
+    <li><a data-link="appointments" >Appointments</a></li>
+    <li><a data-link="prescriptions">Prescriptions</a></li>
+    <li><a data-link="bookappointments" class="active">Book Appointment</a></li>
+    {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
+    <li><a data-link="">My Profile</a></li>   
+  </ul>
+</div>   
+<script>
+      $('#links').click(function(e) {  
+          console.log(e)
+        var url = '/patient/' + e.target.dataset.link
+        console.log(url)
+        document.location.replace(url);
+    });
+</script>       
+<div class="medium-8 columns" style="background-color:#f1f1f1;"> 
+  <div class="row column text-center">
+      <h2>Waiting Room</h2>
+      <hr>
+    </div>
+
+    <div class="row small-up-3 large-up-3">
+      <div class="column">
+       
+        <h5> Patients Ahead </h5>
+        <i class="fa-solid fa-business-time"></i>
+        <p>4</p>
+        
+      </div>
+      <div class="column">
+        <i class="fa-solid fa-timer"></i>
+        <h5>Total Wait Time</h5>
+        <p>50 minutes</p>
+        
+      </div>
+      <div class="column">
+        <i class="fa-solid fa-business-time"></i>
+        <h5>Your Wait Time</h5>
+        <p>6 minutes</p>
+        
+      </div>     
+      <hr>
+    <a href="/patient" class="button expanded">Back to Home</a>
+  {{!-- </body>
+</html> --}}
+
+
 {{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
 <input type="hidden" id="roomID" value={{roomID}}>
 
-
-<script>
-  var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
-  callFrame = window.DailyIframe.createFrame({
-    showLeaveButton: true,
-    iframeStyle: {
-      width: '50%',
-      height: '50%',
-    }
-  });
-  callFrame.join({ url: roomURL });
-  // Prompting for room name:
-
-
-</script>
+<div align= center>
+  <script>
+    var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
+    callFrame = window.DailyIframe.createFrame({
+      showLeaveButton: true,
+      iframeStyle: {
+        width: '50%',
+        height: '50%',
+      }
+    });
+    callFrame.join({ url: roomURL });
+    // Prompting for room name:
+  </script>
+  </div>
     
 </div>
