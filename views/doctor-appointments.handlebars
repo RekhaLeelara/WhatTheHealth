@@ -56,5 +56,11 @@
 
 
   </table>
-
 </div>  
+
+<script>
+  $('#appointments').click(function(e) {  
+    var url = '/patient/appointments/call/' + e.target.dataset.aptid
+    document.location.replace(url);
+  });
+</script>
