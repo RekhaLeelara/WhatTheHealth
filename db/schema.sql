@@ -21,6 +21,18 @@ CREATE TABLE patient (
     Allergies VARCHAR(20),
 );
 
+CREATE TABLE patient (
+    patient_ID INT NOT NULL,
+    fname VARCHAR(20),
+    lname VARCHAR(20),
+    address TEXT,
+    telephone VARCHAR(15),
+    Gender VARCHAR(1),
+    AGE INT,
+    Blood_TYPE VARCHAR(5),
+    Allergies VARCHAR(20),
+);
+
 CREATE TABLE prescription(
     Prescription_Name VARCHAR(20),
     Doses INT,

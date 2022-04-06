@@ -12,7 +12,8 @@ router.post('/login', (req, res) => {
         username: req.body.username
       }
     }).then(dbUserData => {
-        console.log(dbUserData);
+
+        console.log("flushing the login data: "+dbUserData);
       if (!dbUserData) {
         res.status(400).json({ message: 'No user with that username!' });
         return;
@@ -29,7 +30,7 @@ router.post('/login', (req, res) => {
         // declare session variables
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
-        req.session.twitter = dbUserData.twitter;
+        req.session.usertype = dbUserData.usertype;
         req.session.github = dbUserData.github;
         req.session.loggedIn = true;
   

@@ -20,22 +20,22 @@ router.get('/about', (req, res) => {
   
 
 // POST /api/users
-router.post('/user', (req, res) => {
-  console.log("posted successfully");
-  User.create({
-    username: req.body.username,
-    password: req.body.password
-  })
-  .then(dbUserData => {
-    req.session.save(() => {
-      req.session.username = dbUserData.username;
-      req.session.user_id = dbUserData.id;
-      req.session.loggedIn = true;
+// router.post('/user', (req, res) => {
+//   console.log("posted successfully");
+//   User.create({
+//     username: req.body.username,
+//     password: req.body.password
+//   })
+//   .then(dbUserData => {
+//     req.session.save(() => {
+//       req.session.username = dbUserData.username;
+//       req.session.user_id = dbUserData.id;
+//       req.session.loggedIn = true;
   
-      res.json(dbUserData);
-    });
+//       res.json(dbUserData);
+//     });
 
-  });
-});
+//   });
+// });
 
 module.exports = router;
