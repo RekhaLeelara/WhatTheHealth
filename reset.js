@@ -26,26 +26,23 @@ try {
     console.error(err)
 }
 
-
 try {
-    if (!fs.existsSync(pkglock)) {
-        console.log('installing node packages')
+  if (!fs.existsSync(pkglock)) {
+    console.log('installing node packages')
 
-        exec('npm install', (error, stdout, stderr) => {
-            if (error) {
-            console.error(`error: ${error.message}`);
-            return;
-            }
-        
-            if (stderr) {
-            console.error(`stderr: ${stderr}`);
-            return;
-            }
-        
-            console.log(`stdout:\n${stdout}`);
-        });
-        
-      //file exists
+    exec('npm install', (error, stdout, stderr) => {
+        if (error) {
+        console.error(`error: ${error.message}`);
+        return;
+        }
+    
+        if (stderr) {
+        console.error(`stderr: ${stderr}`);
+        return;
+        }
+    
+        console.log(`stdout:\n${stdout}`);
+      });
     }
   } 
   catch(err) {
