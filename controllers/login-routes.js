@@ -29,8 +29,8 @@ router.post('/login', (req, res) => {
         console.log("Enter storing session")
         // declare session variables
         req.session.user_id = dbUserData.id;
-        console.log("req.session.user_id", req.session.user_id);
         req.session.username = dbUserData.username;
+        console.log("req.session.username", req.session.username);
         req.session.usertype = dbUserData.usertype;
         req.session.github = dbUserData.github;
         req.session.loggedIn = true;
