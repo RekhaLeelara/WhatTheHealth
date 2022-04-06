@@ -2,7 +2,7 @@
   <ul class="side-nav" >
     <li><a data-link="appointments" >Appointments</a></li>
     <li><a data-link="prescriptions">Prescriptions</a></li>
-    <li><a data-link="bookappointments" class="active">Book Appointment</a></li>
+    <li><a data-link="bookappointments">Book Appointment</a></li>
     {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
     <li><a data-link="">My Profile</a></li>   
   </ul>
@@ -36,7 +36,7 @@
         <td>{{this.symptoms}}</td>
         <td>{{this.status}}</td>
         <td>{{this.waitTime}}</td>
-        <td><button data-aptid="{{this.id}}" id="{{this.id}}">Check-In</button></td>
+        <td><button data-targ="theButton" data-aptid="{{this.patientID}}" id="{{this.id}}">Check-In</button></td>
         <td><button>Cancel</button></td>
       </tr>
     {{/each}}
@@ -44,14 +44,20 @@
 </div>
 
 <script>
-      $('#appointments').click(function(e) {  
-        var url = '/patient/appointments/call/' + e.target.dataset.aptid
+  $('#appointments').click(function(e) {  
+    if(e.target.dataset.targ === 'theButton'){
+      console.log(e)
+      var url = window.location.origin + '/videoCall.html?id=' + e.target.dataset.aptid
+      var win = window.open(url, '_blank');
+      if (win) {
+        //Browser has allowed it to be opened
+        win.focus();
+        var url = '/patient/appointments/waitingroom'
         document.location.replace(url);
-    });
+      } else {
+        //Browser has blocked it
+        alert('Please allow popups for this website in order to access the call');
+      }
+    }
+});
 </script>
-{{!-- 
-  let method = 'GET';
-  let endpoint = `request url ${input.value}`;
-
-  xhr.open(method, endpoint);
-  xhr.send(); //if in the link what you looking for this send will be empty!!! --}}

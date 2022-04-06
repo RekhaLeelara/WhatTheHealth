@@ -7,6 +7,7 @@ const appointments = [
     id: 1,
     date: 'April 4, 2022',
     time: '10:20am',
+    patientID: 1,
     doctorName: 'Dr. Foo McBar',
     symptoms: 'cold feet',
     status: 'booked',
@@ -73,12 +74,17 @@ router.get('/patient', async (req, res) => {
   res.render('patient', {prescriptions});
 });
   
-router.get('/patient/appointments/call/:roomID', async (req, res) => {
+router.get('/patient/appointments/waitingroom', async (req, res) => {
   // here: need to find out which waiting room id is available?
   // get room ID
   roomID = req.params.roomID
   res.render('waiting-room', {roomID: roomID});
+
+  res.sendFile('videoCall.html', {
+    root: path.join(__dirname, './') // <= you might have to write '/foldername/
+  })
 });
+
 
 
 // book a new appointment
