@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS clinic;
 CREATE DATABASE clinic;
 
 USE clinic;
