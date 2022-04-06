@@ -3,6 +3,7 @@ async function signupFormHandler(e) {
         var time = e.target.dataset.timeslot
         var date = e.target.dataset.date
         var doctorName = e.target.dataset.doctor
+        var availability = e.target.dataset.availability
     
         var symptoms = 'broken leg'
         

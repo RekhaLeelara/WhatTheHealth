@@ -20,16 +20,23 @@ Booking.init(
           autoIncrement: true
         },
         // define an appointment ID column
-        appointmentID: {
+        appointmentid: {
           type: DataTypes.STRING,
           allowNull: false
         },        
         // define a username column
-        patientID: {
+        patientid: {
           type: DataTypes.INTEGER,
           allowNull: false
         },
-        doctorID: {
+        doctorid: {
+          type: DataTypes.INTEGER,
+          references: {
+            model: 'user',
+            key: 'id',
+          },
+        },
+        status: {
           type: DataTypes.STRING,
           allowNull: false
         },

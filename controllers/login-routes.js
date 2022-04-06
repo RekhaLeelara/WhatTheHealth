@@ -12,7 +12,7 @@ router.post('/login', (req, res) => {
         username: req.body.username
       }
     }).then(dbUserData => {
-        console.log("spitting out login data"+dbUserData);
+
       if (!dbUserData) {
         res.status(400).json({ message: 'No user with that username!' });
         return;
@@ -26,13 +26,15 @@ router.post('/login', (req, res) => {
       }
   
       req.session.save(() => {
+        console.log("Enter storing session")
         // declare session variables
         req.session.user_id = dbUserData.id;
+        console.log("req.session.user_id", req.session.user_id);
         req.session.username = dbUserData.username;
         req.session.usertype = dbUserData.usertype;
         req.session.github = dbUserData.github;
         req.session.loggedIn = true;
-  
+        console.log("Exit storing session")
         res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
     });

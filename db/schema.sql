@@ -21,16 +21,14 @@ CREATE TABLE patient (
     Allergies VARCHAR(20),
 );
 
-CREATE TABLE patient (
-    patient_ID INT NOT NULL,
-    fname VARCHAR(20),
-    lname VARCHAR(20),
-    address TEXT,
-    telephone VARCHAR(15),
+CREATE TABLE user (
+    id INT NOT NULL AUTO,
+    username VARCHAR(20),
+    password VARCHAR(20),
+    Specialty VARCHAR(20),
+    phone VARCHAR(20),
+    avail VARCHAR(15),
     Gender VARCHAR(1),
-    AGE INT,
-    Blood_TYPE VARCHAR(5),
-    Allergies VARCHAR(20),
 );
 
 CREATE TABLE prescription(
@@ -90,5 +88,28 @@ INSERT INTO Doctor_Patient VALUES ('Dr. Ayaan Summers', '833663', '2022-01-04');
 INSERT INTO Doctor_Patient VALUES ('Dr. Ayaan Summers', '696405', '2021-12-13');
 INSERT INTO Doctor_Patient VALUES ('Dr. Oswaldo Salas', '383978', '2021-12-16');
 INSERT INTO Doctor_Patient VALUES ('Dr. Daniela Curry', '922884', '2021-11-19');
+
+INSERT INTO user ('username','usertype','password') VALUES('Dr. Foo McBar','doctor','password')
+
+ {
+    availability: 'April 10, 2022',
+    time: '10:00am',//How to get different time displayed in the column
+    doctorName: 'Dr. Foo McBar',
+    Specialty: 'Internal Medicine',
+    Phone: '(416) 932-3784'
+  },
+  {
+    availability: 'April 10, 2022',
+    time: '10:00am',
+    doctorName: 'Dr. Daniela Curry',
+    Specialty: 'Cardiology',
+    Phone: '(416) 381-3887'
+  },
+  {
+    availability: 'April 11, 2022',
+    time: '1:00pm',
+    doctorName: 'Dr. Angelo Cook',
+    Specialty: 'Physiotherapist',
+    Phone: '(416) 723-6710'
 
 -- INSERT INTO user VALUES ('rekhabalaji', 'rekha', NULL);

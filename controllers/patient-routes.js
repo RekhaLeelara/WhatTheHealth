@@ -85,7 +85,7 @@ router.get('/patient/appointments/call/:roomID', async (req, res) => {
 const BookAppointment = require('../models/Booking');
 
 // POST /api/users
-router.post('/patient/book-appointment', (req, res) => {
+router.post('/patient/book-appointment/removethis', (req, res) => {
   console.log("posted successfully");
   BookAppointment.create({
     username: req.session.username,
