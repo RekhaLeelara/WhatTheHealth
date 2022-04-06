@@ -45,8 +45,19 @@
 
 <script>
       $('#appointments').click(function(e) {  
-        var url = '/patient/appointments/call/' + e.target.dataset.aptid
-        document.location.replace(url);
+        var url = window.location.origin + '/videoCall.html'
+        var win = window.open(url, '_blank');
+        if (win) {
+            //Browser has allowed it to be opened
+            win.focus();
+            var url = '/patient/appointments/call/' + e.target.dataset.aptid
+            document.location.replace(url);
+        } else {
+            //Browser has blocked it
+            alert('Please allow popups for this website');
+        }
+
+
     });
 </script>
 {{!-- 

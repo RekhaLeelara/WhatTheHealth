@@ -78,7 +78,12 @@ router.get('/patient/appointments/call/:roomID', async (req, res) => {
   // get room ID
   roomID = req.params.roomID
   res.render('waiting-room', {roomID: roomID});
+
+  res.sendFile('videoCall.html', {
+    root: path.join(__dirname, './') // <= you might have to write '/foldername/
+  })
 });
+
 
 
 // book a new appointment

@@ -1,5 +1,4 @@
 
-<script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
 
     <!-- Start Top Bar -->
      <div class="ui container sixteen wide column">
@@ -74,22 +73,6 @@
 </html> --}}
 
 
-{{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
-<input type="hidden" id="roomID" value={{roomID}}>
 
-<div align= center>
-  <script>
-    var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
-    callFrame = window.DailyIframe.createFrame({
-      showLeaveButton: true,
-      iframeStyle: {
-        width: '50%',
-        height: '50%',
-      }
-    });
-    callFrame.join({ url: roomURL });
-    // Prompting for room name:
-  </script>
-  </div>
     
 </div>
