@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { v4: uuidv4 } = require('uuid');
 
 // harcoded for now, just to get things rolling
 const appointments = [
@@ -68,6 +69,9 @@ router.get('/patient/prescriptions', async (req, res) => {
     res.render('patient-prescriptions', {prescriptions});
 });
 
+router.get('/patient', async (req, res) => {
+  res.render('patient', {prescriptions});
+});
   
 router.get('/patient/appointments/call/:roomID', async (req, res) => {
   // here: need to find out which waiting room id is available?
@@ -76,6 +80,26 @@ router.get('/patient/appointments/call/:roomID', async (req, res) => {
   res.render('waiting-room', {roomID: roomID});
 });
 
+
+// book a new appointment
+const BookAppointment = require('../models/Booking');
+
+// POST /api/users
+router.post('/patient/book-appointment', (req, res) => {
+  console.log("posted successfully");
+  BookAppointment.create({
+    username: req.session.username,
+    appointmentID: uuidv4(),
+    doctorName: req.body.doctorName,
+    date: req.body.date,
+    time: req.body.time,
+    symptoms: req.body.symptoms
+  })
+  .then(dbUserData => {
+
+
+  });
+});
 
 
 module.exports = router;

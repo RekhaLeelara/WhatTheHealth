@@ -1,39 +1,22 @@
-     <main class="container container-fluid mt-5">
-
-
-        <div class="row">
-
-          <nav class="top-bar" data-topbar>
-
-            <ul class="title-area">
-              <ol class="name">
-                <h1><a href="#">WhatTheHealth</a></h1>
-              </ol>          
-            </ul>
-
-            <section class="top-bar-section">
-              <ul class="right">
-                <li class="active"><a href="#">Sign out</a></li>
-              </ul>
-            </section>
-          </nav>
-                
-        </div> 
-
-        <div class="row">
-
-          <div class="medium-4 columns" style="background-color:#f1f1f1;">
-            <ul class="side-nav">
-              <li class="active"><a href="#">Calendar</a></li>
-              <li><a href="#">Prescription</a></li>
-              <li><a href="#">Patient Search</a></li>
-              <li><a href="#">Reference</a></li>
-              <li><a href="#">Earning</a></li>    
-              <li><a href="#">Dashboard</a></li>
-            </ul>
-          </div>          
-          <div class="medium-8 columns" style="background-color:#f1f1f1;">      
-<h1>Patient Calendar</h1>
+<div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
+  <ul class="side-nav" >
+    <li><a data-link="appointments" >Appointments</a></li>
+    <li><a data-link="prescriptions">Prescriptions</a></li>
+    <li><a data-link="bookappointments" class="active">Book Appointment</a></li>
+    {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
+    <li><a data-link="">My Profile</a></li>   
+  </ul>
+</div>   
+<script>
+      $('#links').click(function(e) {  
+          console.log(e)
+        var url = '/patient/' + e.target.dataset.link
+        console.log(url)
+        document.location.replace(url);
+    });
+</script>            
+<div class="medium-8 columns" style="background-color:#f1f1f1;">      
+<h1>Patient Appointments</h1>
 <div class="appointments" id="appointments">
   <table class="patient-appointments .table">
     <tr>

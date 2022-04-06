@@ -1,0 +1,25 @@
+<div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
+  <ul class="side-nav" >
+    <li><a data-link="appointments" >Appointments</a></li>
+    <li><a data-link="prescription">Prescription</a></li>
+    <li><a data-link="" class="active">Dashboard</a></li>
+    <li><a data-link="">Reference</a></li> 
+    <li><a data-link="">Payroll</a></li>    
+    {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
+    <li><a data-link="">My Profile</a></li>   
+  </ul>
+</div>   
+<script>
+      $('#links').click(function(e) {  
+          console.log(e)
+        var url = '/doctor/' + e.target.dataset.link
+        console.log(url)
+        document.location.replace(url);
+    });
+</script> 
+<div class="medium-8 columns" style="background-color:#f1f1f1;">
+    
+  <h1>Write a New Prescription...</h1>
+
+
+</div>  

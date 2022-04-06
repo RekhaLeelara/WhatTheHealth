@@ -1,87 +1,74 @@
-<main class="container container-fluid mt-5">
-
-
-    <div class="row">
-
-        <nav class="top-bar" data-topbar>
-
-            <ul class="title-area">
-                <ol class="name">
-                    <h1><a href="#">WhatTheHealth</a></h1>
-                </ol>
-            </ul>
-
-            <section class="top-bar-section">
-                <ul class="right">
-                    <li class="active"><a href="#">Sign out</a></li>
-                </ul>
-            </section>
-        </nav>
-
+<div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
+  <ul class="side-nav" >
+    <li><a data-link="appointments" >Appointments</a></li>
+    <li><a data-link="prescriptions">Prescriptions</a></li>
+    <li><a data-link="bookappointments" class="active">Book Appointment</a></li>
+    {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
+    <li><a data-link="">My Profile</a></li>   
+  </ul>
+</div>   
+<script>
+      $('#links').click(function(e) {  
+          console.log(e)
+        var url = '/patient/' + e.target.dataset.link
+        console.log(url)
+        document.location.replace(url);
+    });
+</script>   
+<div class="medium-8 columns" style="background-color:#f1f1f1;">
+    <h1>Book Appointments</h1>
+    <p>Monday April 11, 2022</p>
+    <div id="container" class="container">
+        <table class="patient-appointments .table">
+            <tr>
+                <th scope="col">Doctor Name</th>
+                <th scope="col">Specialty</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Symptoms</th>
+                <th scope="col">Availability</th>
+            </tr>
+            {{#each appointments as |apt|}}
+            <tr>
+                <td>{{this.doctorName}}</td>
+                <td>{{this.Specialty}}</td>
+                <td>{{this.Phone}}</td>
+                {{!-- <td>{{this.symptoms}}</td> --}}
+                {{!-- <td>{{this.status}}</td> --}}
+                <td></td>
+                <td><span><a data-date="April 11 2022" data-timeslot="9:00AM" data-doctor="{{this.doctorName}}" id="time">9:00 AM</a></span>
+                    <span><a data-date="April 11 2022" data-timeslot="10:00AM" data-doctor="{{this.doctorName}}" id="time">10:00 AM</a></span>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+                    <p>Tuesday April 12, 2022</p>
+        <table class="patient-appointments .table">
+            <tr>
+                <th scope="col">Doctor Name</th>
+                <th scope="col">Specialty</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Symptoms</th>
+                <th scope="col">Availability</th>
+            </tr>
+            {{#each appointments as |apt|}}
+            <tr>
+                <td>{{this.doctorName}}</td>
+                <td>{{this.Specialty}}</td>
+                <td>{{this.Phone}}</td>
+                {{!-- <td>{{this.symptoms}}</td> --}}
+                {{!-- <td>{{this.status}}</td> --}}
+                <td></td>
+                <td><span><a data-date="April 12 2022" data-timeslot="9:00AM" data-doctor="{{this.doctorName}}" class='test' id="time">9:00 AM</a></span>
+                    <span><a data-date="April 12 2022" data-timeslot="10:00AM" data-doctor="{{this.doctorName}}" id="time">10:00 AM</a></span>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
     </div>
+</div>
+{{!-- generate uuids in-browser for appointment unique ids --}}
 
-    <div class="row">
 
-        <div class="medium-4 columns" style="background-color:#f1f1f1;">
-            <ul class="side-nav">
-                <li class="active"><a href="#">Calendar</a></li>
-                <li><a href="#">Prescription</a></li>
-                <li><a href="#">Patient Search</a></li>
-                <li><a href="#">Reference</a></li>
-                <li><a href="#">Earning</a></li>
-                <li><a href="#">Dashboard</a></li>
-            </ul>
-        </div>
-        <div class="medium-8 columns" style="background-color:#f1f1f1;">
-            <h1>Book Appointments</h1>
-            <p>Monday April 11, 2022</p>
-            <table class="patient-appointments .table">
-                <tr>
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Specialty</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Symptoms</th>
-                    <th scope="col">Availability</th>
-                </tr>
-                {{#each appointments as |apt|}}
-                <tr>
-                    <td>{{this.doctorName}}</td>
-                    <td>{{this.Specialty}}</td>
-                    <td>{{this.Phone}}</td>
-                    {{!-- <td>{{this.symptoms}}</td> --}}
-                    {{!-- <td>{{this.status}}</td> --}}
-                    <td></td>
-                    <td><span><a href="time" id="time">9:00 AM</a></span>
-                        <span><a href="time" id="time">10:00 AM</a></span>
-                    </td>
-                </tr>
-                {{/each}}
-            </table>
-                        <p>Tuesday April 12, 2022</p>
-            <table class="patient-appointments .table">
-                <tr>
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Specialty</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Symptoms</th>
-                    <th scope="col">Availability</th>
-                </tr>
-                {{#each appointments as |apt|}}
-                <tr>
-                    <td>{{this.doctorName}}</td>
-                    <td>{{this.Specialty}}</td>
-                    <td>{{this.Phone}}</td>
-                    {{!-- <td>{{this.symptoms}}</td> --}}
-                    {{!-- <td>{{this.status}}</td> --}}
-                    <td></td>
-                    <td><span><a href="time" id="time">9:00 AM</a></span>
-                        <span><a href="time" id="time">10:00 AM</a></span>
-                    </td>
-                </tr>
-                {{/each}}
-            </table>
-            <script>
-                document.getElementById('time').addEventListener('click', signupFormHandler);
-                alert("Your Appointment has been booked successfully!");
-            </script>
-        
+<script src="/javascript/bookappointment.js"></script>
+
+

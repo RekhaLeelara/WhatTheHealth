@@ -33,7 +33,7 @@ function createUser(){
         headers: { "Content-Type": "application/json" }
     })
     .then(function(){
-        // document.location.replace('/');
+        document.location.replace('/');
     })
     .catch(function(error){
         console.log("error!!");

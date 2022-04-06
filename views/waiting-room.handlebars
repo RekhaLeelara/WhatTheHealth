@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -66,7 +67,7 @@
     </div>
  
     <hr>
-    <a href="#" class="button expanded">Back to Home</a>
+    <a href="/landing.handlebars" class="button expanded">Back to Home</a>
     
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -77,12 +78,24 @@
   </body>
 </html>
 
+=======
+<div class="medium-4 columns" style="background-color:#f1f1f1;">
+  <ul class="side-nav">
+    <li class="active"><a href="#">Appointments</a></li>
+    <li><a href="#">Prescription</a></li>
+    <li><a href="#">Patient Search</a></li>
+    <li><a href="#">Reference</a></li>
+    <li><a href="#">Earning</a></li>    
+    <li><a href="#">Dashboard</a></li>
+  </ul>
+</div>          
+<div class="medium-8 columns" style="background-color:#f1f1f1;">      
+>>>>>>> 62a2d6b70ad49f3be15366ba8be6c43352983027
 
 {{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
 <input type="hidden" id="roomID" value={{roomID}}>
 
 
-<!-- Import TURN config -->
 <script>
   var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
   callFrame = window.DailyIframe.createFrame({
@@ -98,3 +111,4 @@
 
 </script>
     
+</div>
