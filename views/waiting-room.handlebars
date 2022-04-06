@@ -1,15 +1,20 @@
-<<<<<<< HEAD
-<!doctype html>
+{{!-- <!doctype html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
     <title>WhatTheHealth</title>
-    <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <div class="main ui stackable grid container">
+    <div class="main ui stackable grid container"> --}}
 
-    <div class="ui container sixteen wide column">
+   
+  {{!-- </head>
+  <body> --}}
+<script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+
+    <!-- Start Top Bar -->
+     <div class="ui container sixteen wide column">
         <div class="ui raised teal segment">
             <div class="row">
                 <h1 class="ui header">
@@ -21,10 +26,7 @@
             </div>
         </div>
     </div>
-  </head>
-  <body>
-
-    <!-- Start Top Bar -->
+    
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
@@ -38,7 +40,29 @@
 
     
 
-    <div class="row column text-center">
+    
+ 
+    
+    
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+<div class="medium-4 columns" style="background-color:#f1f1f1;">
+  <ul class="side-nav">
+    <li class="active"><a href="#">Appointments</a></li>
+    <li><a href="#">Prescription</a></li>
+    <li><a href="#">Patient Search</a></li>
+    <li><a href="#">Reference</a></li>
+    <li><a href="#">Earning</a></li>    
+    <li><a href="#">Dashboard</a></li>
+  </ul>
+</div>          
+<div class="medium-8 columns" style="background-color:#f1f1f1;"> 
+  <div class="row column text-center">
       <h2>Waiting Room</h2>
       <hr>
     </div>
@@ -62,53 +86,31 @@
         <h5>Your Wait Time</h5>
         <p>6 minutes</p>
         
-      </div>
-      
-    </div>
- 
-    <hr>
-    <a href="/landing.handlebars" class="button expanded">Back to Home</a>
-    
+      </div>     
+      <hr>
+    <a href="/patient" class="button expanded">Back to Home</a>
+  {{!-- </body>
+</html> --}}
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
-</html>
-
-=======
-<div class="medium-4 columns" style="background-color:#f1f1f1;">
-  <ul class="side-nav">
-    <li class="active"><a href="#">Appointments</a></li>
-    <li><a href="#">Prescription</a></li>
-    <li><a href="#">Patient Search</a></li>
-    <li><a href="#">Reference</a></li>
-    <li><a href="#">Earning</a></li>    
-    <li><a href="#">Dashboard</a></li>
-  </ul>
-</div>          
-<div class="medium-8 columns" style="background-color:#f1f1f1;">      
->>>>>>> 62a2d6b70ad49f3be15366ba8be6c43352983027
 
 {{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
 <input type="hidden" id="roomID" value={{roomID}}>
 
+<div align= center>
+  <script>
+    var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
+    callFrame = window.DailyIframe.createFrame({
+      showLeaveButton: true,
+      iframeStyle: {
+        width: '50%',
+        height: '50%',
+      }
+    });
+    callFrame.join({ url: roomURL });
+    // Prompting for room name:
 
-<script>
-  var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
-  callFrame = window.DailyIframe.createFrame({
-    showLeaveButton: true,
-    iframeStyle: {
-      width: '50%',
-      height: '50%',
-    }
-  });
-  callFrame.join({ url: roomURL });
-  // Prompting for room name:
 
-
-</script>
+  </script>
+  </div>
     
 </div>
