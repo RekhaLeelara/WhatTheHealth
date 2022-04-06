@@ -67,9 +67,10 @@
         <h5>Your Wait Time</h5>
         <p>6 minutes</p>
         
-      </div>     
+      </div> 
+          
       <hr>
-    <a href="/patient" class="button expanded">Back to Home</a>
+    <a href="/patient/appointments" class="button expanded">Back to Appointments</a>
   {{!-- </body>
 </html> --}}
 
@@ -77,7 +78,7 @@
 {{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
 <input type="hidden" id="roomID" value={{roomID}}>
 
-<div align= center>
+<div>
   <script>
     var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
     callFrame = window.DailyIframe.createFrame({
