@@ -32,7 +32,7 @@ function createUser(e){
     })
     .then(function(){
         console.log("Redirect");
-        document.location.replace('/');
+        document.location.replace('/patient');
     })
     .catch(function(error){
         console.log("error!!");
