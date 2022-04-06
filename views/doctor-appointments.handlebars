@@ -1,66 +1,59 @@
-<div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
-  <ul class="side-nav" >
-    <li><a data-link="appointments" >Appointments</a></li>
-    <li><a data-link="prescription">Prescription</a></li>
-    <li><a data-link="" class="active">Dashboard</a></li>
-    <li><a data-link="">Reference</a></li> 
-    <li><a data-link="">Payroll</a></li>    
-    {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
-    <li><a data-link="">My Profile</a></li>   
-  </ul>
-</div>   
-<script>
-      $('#links').click(function(e) {  
-          console.log(e)
-        var url = '/doctor/' + e.target.dataset.link
-        console.log(url)
-        document.location.replace(url);
-    });
-</script> 
-<div class="medium-8 columns" style="background-color:#f1f1f1;">
+<div class="col">
+
+  <!-- add one row wrapping the left selection column and the display field -->
+  <div class="medium-2 columns" style="background-color:#f1f1f1;">
+      <ul class="side-nav">
+          <li class="active"><a href="#">Calendar</a></li>
+          <li><a href="#">Prescription</a></li>
+          <li><a href="#">Patient Search</a></li>
+          <li><a href="#">Reference</a></li>
+          <li><a href="#">Earning</a></li>    
+          <li><a href="#">Dashboard</a></li>
+      </ul>
+  </div>
+            
+  <div class="medium-8 columns" style="background-color:#f1f1f1; height: 100%;">
+      
+    <h1>Doctor Appointments</h1>
+    <table class="doctor-appointments .table">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Patient Name</th>
+          <th scope="col">Symptoms</th>
+          <th scope="col">Status</th>
+          <th scope="col">Checked-In</th>
+          <th scope="col">Actions:</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each appointments as |apt|}}
+        <tr>
+          {{#if @index}}
+            <th scope="row">{{@index}}</th>
+          {{else}}
+            <th scope="row">Next</th>
+          {{/if}}
+          <td>{{this.date}}</td>
+          <td>{{this.time}}</td>
+          <td>{{this.patientName}}</td>
+          <td>{{this.symptoms}}</td>
+          <td>{{this.status}}</td>
+          <td>{{this.waitingRoom}}</td>
+          {{#if this.waitingRoom}}
+          <td><button>Start</button></td>
+          {{/if}}
+          <td><button>Cancel</button></td>
+        </tr>
+        {{/each}}
+      </tbody>
+
+
+
+    </table>
+
+  </div>
+
+</div>
     
-  <h1>Doctor Appointments</h1>
-  <table class="doctor-appointments .table">
-    <thead>
-      <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Time</th>
-        <th scope="col">Patient Name</th>
-        <th scope="col">Symptoms</th>
-        <th scope="col">Status</th>
-        <th scope="col">Checked-In</th>
-        <th scope="col">Actions:</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each appointments as |apt|}}
-      <tr>
-        {{#if @index}}
-          <th scope="row">{{@index}}</th>
-        {{else}}
-          <th scope="row">Next</th>
-        {{/if}}
-        <td>{{this.date}}</td>
-        <td>{{this.time}}</td>
-        <td>{{this.patientName}}</td>
-        <td>{{this.symptoms}}</td>
-        <td>{{this.status}}</td>
-        <td>{{this.waitingRoom}}</td>
-        {{#if this.waitingRoom}}
-        <td><button>Start</button></td>
-        {{/if}}
-      </tr>
-      {{/each}}
-    </tbody>
-
-
-
-  </table>
-</div>  
-
-<script>
-  $('#appointments').click(function(e) {  
-    var url = '/patient/appointments/call/' + e.target.dataset.aptid
-    document.location.replace(url);
-  });
-</script>
