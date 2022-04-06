@@ -1,3 +1,56 @@
+{{!-- <!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <title>WhatTheHealth</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <div class="main ui stackable grid container"> --}}
+
+   
+  {{!-- </head>
+  <body> --}}
+<script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+
+    <!-- Start Top Bar -->
+     <div class="ui container sixteen wide column">
+        <div class="ui raised teal segment">
+            <div class="row">
+                <h1 class="ui header">
+                     {{!-- {{#each patient}} --}} Welcome  {{this.patient}}  {{!-- {{/each}} --}}
+                    <a href="/">
+                        <div id="logout" class="ui basic button">Log Out</div>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Patient View</li>
+          
+        </ul>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+
+
+    
+
+    
+ 
+    
+    
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
 <div class="medium-4 columns" style="background-color:#f1f1f1;">
   <ul class="side-nav">
     <li class="active"><a href="#">Appointments</a></li>
@@ -8,13 +61,42 @@
     <li><a href="#">Dashboard</a></li>
   </ul>
 </div>          
-<div class="medium-8 columns" style="background-color:#f1f1f1;">      
+<div class="medium-8 columns" style="background-color:#f1f1f1;"> 
+  <div class="row column text-center">
+      <h2>Waiting Room</h2>
+      <hr>
+    </div>
 
-  <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
-  {{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
-  <input type="hidden" id="roomID" value={{roomID}}>
+    <div class="row small-up-3 large-up-3">
+      <div class="column">
+       
+        <h5> Patients Ahead </h5>
+        <i class="fa-solid fa-business-time"></i>
+        <p>4</p>
+        
+      </div>
+      <div class="column">
+        <i class="fa-solid fa-timer"></i>
+        <h5>Total Wait Time</h5>
+        <p>50 minutes</p>
+        
+      </div>
+      <div class="column">
+        <i class="fa-solid fa-business-time"></i>
+        <h5>Your Wait Time</h5>
+        <p>6 minutes</p>
+        
+      </div>     
+      <hr>
+    <a href="/patient" class="button expanded">Back to Home</a>
+  {{!-- </body>
+</html> --}}
 
 
+{{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
+<input type="hidden" id="roomID" value={{roomID}}>
+
+<div align= center>
   <script>
     var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
     callFrame = window.DailyIframe.createFrame({
@@ -27,5 +109,6 @@
     callFrame.join({ url: roomURL });
     // Prompting for room name:
   </script>
+  </div>
     
 </div>
