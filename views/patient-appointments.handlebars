@@ -36,7 +36,7 @@
         <td>{{this.symptoms}}</td>
         <td>{{this.status}}</td>
         <td>{{this.waitTime}}</td>
-        <td><button data-aptid="{{this.id}}" id="{{this.id}}">Check-In</button></td>
+        <td><button data-patientid="{{this.patientID}}" data-aptid="{{this.id}}" id="{{this.id}}">Check-In</button></td>
         <td><button>Cancel</button></td>
       </tr>
     {{/each}}
@@ -45,14 +45,11 @@
 
 <script>
       $('#appointments').click(function(e) {  
-        var url = '/patient/appointments/call/' + e.target.dataset.aptid
+        console.log(e.target.dataset)
+        popupURL = window.location.origin + '/videoCall.html?id=' + e.target.dataset.patientid
+        window.open(popupURL, "_blank");
+        var url = '/patient/appointments/waitingroom/'
         document.location.replace(url);
         
     });
 </script>
-{{!-- 
-  let method = 'GET';
-  let endpoint = `request url ${input.value}`;
-
-  xhr.open(method, endpoint);
-  xhr.send(); //if in the link what you looking for this send will be empty!!! --}}

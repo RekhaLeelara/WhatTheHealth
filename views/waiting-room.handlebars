@@ -17,13 +17,13 @@
 </script>       
 <div class="medium-8 columns" style="background-color:#f1f1f1;">      
 
-<script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+{{!-- <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script> --}}
 {{!-- this is a workaround for storing data from the patient-routes and then accessing it in the script tag later on --}}
 <input type="hidden" id="roomID" value={{roomID}}>
 
 
 <script>
-  var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
+  {{!-- var roomURL = 'https://allhands.daily.co/CheckupRoom' +  document.getElementById('roomID').value
   callFrame = window.DailyIframe.createFrame({
     showLeaveButton: true,
     iframeStyle: {
@@ -31,7 +31,7 @@
       height: '50%',
     }
   });
-  callFrame.join({ url: roomURL });
+  callFrame.join({ url: roomURL }); --}}
   // Prompting for room name:
 
 

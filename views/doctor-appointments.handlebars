@@ -1,5 +1,5 @@
 <div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
-  <ul class="side-nav" >
+  <ul class="side-nav">
     <li><a data-link="appointments" >Appointments</a></li>
     <li><a data-link="prescription">Prescription</a></li>
     <li><a data-link="" class="active">Dashboard</a></li>
@@ -17,46 +17,54 @@
         document.location.replace(url);
     });
 </script>   
-  <div class="medium-8 columns" style="background-color:#f1f1f1; height: 100%;">
+  <div class="medium-8 columns" style="background-color:#f1f1f1; height:fit-content;">
       
     <h1>Doctor Appointments</h1>
-    <table class="doctor-appointments .table">
-      <thead>
-        <tr>
-          <th scope="col">Date</th>
-          <th scope="col">Time</th>
-          <th scope="col">Patient Name</th>
-          <th scope="col">Symptoms</th>
-          <th scope="col">Status</th>
-          <th scope="col">Checked-In</th>
-          <th scope="col">Actions:</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each galleries as |apt|}}
-        <tr>
-          {{!-- {{#if @index}}
-            <th scope="row">{{@index}}</th>
-          {{else}}
-            <th scope="row">Next</th>
-          {{/if}} --}}
-          <td>{{this.date}}</td>
-          <td>{{this.time}}</td>
-          <td>{{this.patientname}}</td>
-          <td>{{this.symptoms}}</td>
-          <td>{{this.status}}</td>
-          <td>{{this.waitingRoom}}</td>
-          {{#if this.waitingRoom}}
-          <td><button>Start</button></td>
-          {{/if}}
-          <td><button>Cancel</button></td>
-        </tr>
-        {{/each}}
-      </tbody>
+    <div>
+      <table class="doctor-appointments .table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Patient Name</th>
+            <th scope="col">Symptoms</th>
+            <th scope="col">Status</th>
+            <th scope="col">Checked-In</th>
+            <th scope="col">Actions:</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each galleries as |apt|}}
+          <tr>
+            {{#if @index}}
+              <th scope="row">{{@index}}</th>
+            {{else}}
+              <th scope="row">Next</th>
+            {{/if}}
+            <td>{{this.date}}</td>
+            <td>{{this.time}}</td>
+            <td>{{this.patientname}}</td>
+            <td>{{this.symptoms}}</td>
+            <td>{{this.status}}</td>
+            <td>{{this.waitingRoom}}</td>
+            {{#if this.waitingRoom}}
+            <td><button data-patientid="{{this.patientid}}" style="width: 100%;">Start</button></td>
+            {{/if}}
+            <td><button style="width: 100%;">Cancel</button></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <script>
+        console.log(e.target.dataset)
+        popupURL = window.location.origin + '/videoCall.html?id=' + e.target.dataset.patientid
+        window.open(popupURL, "_blank");
+        // var url = '/patient/appointments/waitingroom/'
+        // document.location.replace(url);
 
-
-
-    </table>
+    </script>
 
   </div>
 

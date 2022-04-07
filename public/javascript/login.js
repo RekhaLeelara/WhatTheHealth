@@ -10,6 +10,7 @@ function loginformhandler(event) {
   
     if (username && password) {
 
+    
     fetch('login', {
         method: 'post',
         body: JSON.stringify({
@@ -29,5 +30,7 @@ function loginformhandler(event) {
         });
 
     }
+    // json method ///
+    
 }
   

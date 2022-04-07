@@ -32,9 +32,12 @@
       }
 
       footer {
-          background: lightblue;
+          position: fixed;
+          left: 0;
+          bottom: 0;
           width: 100%;
-          padding: 40px 35px;
+          height: fit-content;
+          background: lightblue;
       }
 
       footer {
@@ -56,12 +59,11 @@
   <body>
 
       <header>
-        <nav class="top-bar" data-topbar.>
-
+        <nav class="top-bar" data-sticky-container.>
 
           <ul class="title-area">
             <li class="name">          
-              <h1><a href="#" style="color: aqua;"><img src="logo_small.png" style="width: fit-content; margin-right: 1px;">WhatTheHealth</a></h1>
+              <h1><a href="/" style="color: aqua;"><img src="logo_small.png" style="width: fit-content; margin-right: 1px;">WhatTheHealth</a></h1>
             </li>
       
             <!-- display the menu instead of the selections -->
@@ -71,7 +73,7 @@
       
           <section id="top-bar-section" class="top-bar-section">
             <ul class="right">
-              <li><a data-link="/">Home</a></li>
+              <li class="active"><a data-link="/">Home</a></li>
               <li><a data-link="/about">About us</a></li>
               <li><a data-link="/login">Login</a></li>
             </ul>

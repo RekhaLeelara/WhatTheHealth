@@ -101,9 +101,9 @@ router.get('/patient/appointments/waitingroom', async (req, res) => {
   roomID = req.params.roomID
   res.render('waiting-room', {roomID: roomID});
 
-  res.sendFile('videoCall.html', {
-    root: path.join(__dirname, './') // <= you might have to write '/foldername/
-  })
+  // res.sendFile('videoCall.html', {
+  //   root: path.join(__dirname, './') // <= you might have to write '/foldername/
+  // })
 });
 
 
