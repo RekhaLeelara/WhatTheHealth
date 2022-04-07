@@ -7,6 +7,7 @@ const appointments = [
     date: 'April 4, 2022',
     time: '10:20am',
     patientName: 'Michael Palumbo',
+    patientID: 2,
     symptoms: 'cold feet',
     status: 'booked',
     waitingRoom: false
@@ -16,6 +17,7 @@ const appointments = [
     time: '10:35am',
     patientName: 'Goofball McGee',
     symptoms: 'puffy shirt',
+    patientID: 1,
     status: 'booked',
     waitingRoom: true
   }
