@@ -19,7 +19,7 @@
 </script>       
 <div class="medium-8 columns" style="background-color:#f1f1f1;"> 
   <div class="row column text-center">
-      <h2>Waiting Room</h2>
+      <h1>Waiting Room</h1>
       <hr>
     </div>
 
@@ -40,7 +40,37 @@
       <div class="column">
         <i class="fa-solid fa-business-time"></i>
         <h3>Your Current Wait Time</h3>
-        <p>6 minutes</p>
+        <label id="minutes">00</label><label id="colon">:</label>
+      
+      <label id="seconds">00</label>
+   
+   
+    <script type="text/javascript">
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        setInterval(setTime, 1000);
+
+        function setTime()
+        {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds%60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+        }
+
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
+    </script>
         
       </div>     
 
