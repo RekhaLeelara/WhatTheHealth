@@ -33,16 +33,16 @@
         </tr>
       </thead>
       <tbody>
-        {{#each galleries as |apt|}}
+        {{#each appointments as |apt|}}
         <tr>
-          {{!-- {{#if @index}}
+          {{#if @index}}
             <th scope="row">{{@index}}</th>
           {{else}}
             <th scope="row">Next</th>
-          {{/if}} --}}
+          {{/if}}
           <td>{{this.date}}</td>
           <td>{{this.time}}</td>
-          <td>{{this.patientid}}</td>
+          <td>{{this.patientName}}</td>
           <td>{{this.symptoms}}</td>
           <td>{{this.status}}</td>
           <td>{{this.waitingRoom}}</td>

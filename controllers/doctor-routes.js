@@ -1,5 +1,7 @@
 const router = require('express').Router();
-
+// book a new appointment
+const BookAppointment = require('../models/Booking');
+const User = require('../models/User');
 const appointments = [
   {
     date: 'April 4, 2022',
@@ -17,15 +19,82 @@ const appointments = [
     status: 'booked',
     waitingRoom: true
   }
-  
+
 ];
 
+// router.get('/doctor/appointments', async (req, res) => {
+//   res.render('doctor-appointments',);
+// });
+
+// router.get('/doctor/appointments', async (req, res) => {
+
+//   BookAppointment.findAll({
+//     where: {
+//       doctorid: req.session.user_id
+//     }
+//   }).then(dbUserData => {
+//     console.log("data book appointment", dbUserData.toJSON());
+//     res.render('doctor-appointments',);
+
+//   })
+//     // .then(data => {
+//     //   console.log("data book appointment", data.toJSON());
+//     // });
+// });
+
 router.get('/doctor/appointments', async (req, res) => {
-  res.render('doctor-appointments', {appointments});
+  try {
+    const dbDocAptData = await BookAppointment.findAll({
+      where: {
+        doctorid: req.session.user_id
+      }
+    });
+    console.log("dbDocAptData: ", dbDocAptData)
+
+    const galleries = dbDocAptData.map((gallery) =>
+      gallery.get({ plain: true })
+    );
+    console.log("render galleries: ", galleries)
+    res.render('doctor-appointments', {galleries});
+    console.log("after running the data render")
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
+// router.get('/doctor/appointments', (req, res) => {
+//   BookAppointment.findAll({
+//     where: {
+//       doctorid: req.session.user_id
+//     }
+//   })
+//     .then(dbUserData => {
+//       const galleries = dbUserData.map((gallery) =>
+//         gallery.get({ plain: true })
+//       );
+//       console.log("render galleries: ", galleries)
+//       getUserName(galleries)
+//     })
+//     // .then(data => {
+//     //   User.findOne({
+//     //     where: {
+//     //       id: data.patientid
+//     //     }
+//     //   })
+//     // })
+//     // .then(data => {
+//     //   console.log("after running the data render", data)
+//     //   res.render('doctor-appointments', { galleries });
+//     // })
+
+
+// });
+
+
 router.get('/doctor/prescription', async (req, res) => {
-  res.render('doctor-prescription', {appointments});
+  res.render('doctor-prescription', { appointments });
 });
 
 router.get('/doctor', async (req, res) => {
