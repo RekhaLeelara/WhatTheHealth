@@ -1,34 +1,34 @@
 <div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
-  <ul class="side-nav" >
-    <li><a data-link="appointments" >Appointments</a></li>
+  <ul class="side-nav">
+    <li><a data-link="appointments">Appointments</a></li>
     <li><a data-link="prescriptions">Prescriptions</a></li>
     <li><a data-link="bookappointments" class="active">Book Appointment</a></li>
     {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
-    <li><a data-link="">My Profile</a></li>   
+    <li><a data-link="">My Profile</a></li>
   </ul>
-</div>   
+</div>
 <script>
-      $('#links').click(function(e) {  
-          console.log(e)
-        var url = '/patient/' + e.target.dataset.link
-        console.log(url)
-        document.location.replace(url);
-    });
-</script>       
-<div class="medium-8 columns" style="background-color:#f1f1f1;">      
-<h1>Patient Calendar</h1>
-<div class="appointments" id="appointments">
-  <table class="patient-appointments .table">
-    <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Time</th>
-      <th scope="col">Doctor Name</th>
-      <th scope="col">Symptoms</th>
-      <th scope="col">Status</th>
-      <th scope="col">Wait Time (Minutes)</th>
-      <th scope="col">Actions:</th>
-    </tr>
-    {{#each galleries as |apt|}}
+  $('#links').click(function (e) {
+    console.log(e)
+    var url = '/patient/' + e.target.dataset.link
+    console.log(url)
+    document.location.replace(url);
+  });
+</script>
+<div class="medium-8 columns" style="background-color:#f1f1f1;">
+  <h1>Patient Calendar</h1>
+  <div class="appointments" id="appointments">
+    <table class="patient-appointments .table">
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">Symptoms</th>
+        <th scope="col">Status</th>
+        <th scope="col">Wait Time (Minutes)</th>
+        <th scope="col">Actions:</th>
+      </tr>
+      {{#each galleries as |apt|}}
       <tr>
         <td>{{this.date}}</td>
         <td>{{this.time}}</td>
@@ -39,17 +39,19 @@
         <td><button data-patientid="{{this.patientid}}" data-aptid="{{this.id}}" id="{{this.id}}">Check-In</button></td>
         <td><button>Cancel</button></td>
       </tr>
-    {{/each}}
-  </table>
-</div>
+      {{/each}}
+    </table>
+  </div>
 
-<script>
-      $('#appointments').click(function(e) {  
-        console.log(e.target.dataset)
-        popupURL = window.location.origin + '/videoCall.html?id=' + e.target.dataset.patientid
-        window.open(popupURL, "_blank");
-        var url = '/patient/appointments/waitingroom/'
-        document.location.replace(url);
-        
+  <script>
+    $('#appointments').click(function (e) {
+
+      console.log(e.target.dataset)
+      console.log(e.target.dataset.aptid, e.target.dataset.patientid)
+      popupURL = window.location.origin + '/videoCall.html?id=' + e.target.dataset.patientid
+      window.open(popupURL, "_blank");
+      var url = '/patient/appointments/waitingroom/'
+      document.location.replace(url);
+
     });
-</script>
+  </script>
