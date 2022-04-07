@@ -1,0 +1,52 @@
+<div class="custom-container">
+    <div class="jumbotron">
+        <h3 class="text-center text-primary" style="width: 50%; ">SignUp Form</h3>
+        <br>        
+
+        <form class="row" action="" id="login" method="POST" style="margin-left: 10%;">
+            <div class="form-group">
+                <label for="username-lbl">Username<span class="text-danger">*</span></label>
+                <input type="username" class="form-control" name="username" id="username-txt"
+                    placeholder="Enter your username" style="width: 50%;">
+            </div>
+            <div class="form-group">
+                <label for="password">Password <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" name="password" id="password"
+                    placeholder="Enter Your Password" style="width: 50%;">
+            </div>
+            <div class="form-group">
+                <label for="userType">I am a<span class="text-danger">*</span></label>
+                  <input type="radio" id="doctor" name="usertype" value="doctor">
+                  <label for="doctor">Doctor</label><br>
+                  <input type="radio" id="patient" name="usertype" value="patient">
+                  <label for="patient">Patient</label><br>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="SignUp" class="btn btn-info btn-block" style="width: 50%;">
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="text-center text-primary" style="width: 50%;">
+                      Already an user? Login <a href="/login">here</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        {{#if success}}
+        <div class="alert alert-success alert-dismissible fade show">
+            <strong>{{success}}</strong>
+            <button class="close" data-dismiss="alert"><span>&times;</span></button>
+        </div>
+        {{/if}}
+        {{#if error}}
+        <div class="alert alert-danger alert-dismissible fade show">
+            <strong>{{error}}</strong>
+            <button class="close" data-dismiss="alert"><span>&times;</span></button>
+        </div>
+        {{/if}}
+
+    </div>
+</div>
+
+<script src="/javascript/user.js"></script>

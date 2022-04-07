@@ -1,0 +1,54 @@
+<div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
+  <ul class="side-nav" >
+    <li><a data-link="appointments" >Appointments</a></li>
+    <li><a data-link="prescriptions" class="active">Prescriptions</a></li>
+    <li><a data-link="bookappointments" >Book Appointment</a></li>
+    {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
+    <li><a data-link="">My Profile</a></li>   
+  </ul>
+</div>      
+<script>
+      $('#links').click(function(e) {  
+          console.log(e)
+        var url = '/patient/' + e.target.dataset.link
+        console.log(url)
+        document.location.replace(url);
+    });
+</script>     
+<div class="medium-8 columns" style="background-color:#f1f1f1;">      
+  <h1>Patient Prescriptions</h1>
+  <table class="patient-prescriptions .table">
+    <tr>
+      <th scope="col">Drug Name</th>
+      <th scope="col">Form</th>
+      <th scope="col">Dosage</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Refills</th>
+      <th scope="col">Expiration</th>
+      <th scope="col">Instructions</th>
+      <th scope="col">Doctor</th>
+      <th scope="col">Pharmacy</th>
+      <th scope="col">Pharmacy Phone</th>
+      <th scope="col">Pharmacy Fax</th>
+      <th scope="col">Status</th>
+    </tr>
+  {{#each prescriptions}}
+    <tr>
+      <td>{{this.drug}}</td>
+      <td>{{this.form}}</td>
+      <td>{{this.dosage}}</td>
+      <td>{{this.quantity}}</td>
+      <td>{{this.refills}}</td>
+      <td>{{this.expiration}}</td>
+      <td>{{this.instructions}}</td>
+      <td>{{this.doctorName}}</td>
+      <td>{{this.pharmacy}}</td>
+      <td>{{this.pharmacyPhone}}</td>
+      <td>{{this.pharmacyFax}}</td>
+      <td>{{this.status}}</td>
+    </tr>
+  <tr>
+
+  {{/each}}
+  </table>
+</div>
