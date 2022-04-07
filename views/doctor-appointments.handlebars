@@ -1,5 +1,5 @@
 <div id="links" class="medium-4 columns links" style="background-color:#f1f1f1;">
-  <ul class="side-nav" >
+  <ul class="side-nav">
     <li><a data-link="appointments" >Appointments</a></li>
     <li><a data-link="prescription">Prescription</a></li>
     <li><a data-link="" class="active">Dashboard</a></li>
@@ -17,7 +17,7 @@
         document.location.replace(url);
     });
 </script>   
-  <div class="medium-8 columns" style="background-color:#f1f1f1; height: 100%;">
+  <div class="medium-8 columns" style="background-color:#f1f1f1; height:fit-content;">
       
     <h1>Doctor Appointments</h1>
     <table class="doctor-appointments .table">
@@ -47,9 +47,9 @@
           <td>{{this.status}}</td>
           <td>{{this.waitingRoom}}</td>
           {{#if this.waitingRoom}}
-          <td><button>Start</button></td>
+          <td><button style="width: 100%;">Start</button></td>
           {{/if}}
-          <td><button>Cancel</button></td>
+          <td><button style="width: 100%;">Cancel</button></td>
         </tr>
         {{/each}}
       </tbody>
