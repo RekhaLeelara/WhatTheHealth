@@ -31,7 +31,8 @@ Booking.init(
     // define an appointment ID column
     waitingroom: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      defaultValue: true,
     },
     // define an appointment ID column
     appointmentid: {
