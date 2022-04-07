@@ -48,9 +48,9 @@ router.post('/patient/book-appointment', (req, res) => {
       console.log("querying the doctor name", dbUserData);
       BookAppointment.create({
         // username: req.session.username,
-        username: req.session.username,
+        patientname: req.session.username,
         appointmentid: uuidv4(),
-        doctorName: req.body.doctorName,
+        doctorname: req.body.doctorName,
         date: req.body.date,
         time: req.body.time,
         symptoms: req.body.symptoms,

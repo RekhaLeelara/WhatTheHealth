@@ -1,5 +1,8 @@
 const router = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
+const BookAppointment = require('../models/Booking');
+const User = require('../models/User');
+
 
 // harcoded for now, just to get things rolling
 const appointments = [
@@ -16,10 +19,28 @@ const appointments = [
   
 ];
 
-router.get('/patient/appointments', async (req, res) => {
-    res.render('patient-appointments', {appointments});
-  });
+  router.get('/patient/appointments', async (req, res) => {
+    try {
+      const dbDocAptData = await BookAppointment.findAll({
+        where: {
+          patientid: req.session.user_id
+        }
+      });
 
+      console.log("dbDocAptData: ", dbDocAptData)
+  
+      const galleries = dbDocAptData.map((gallery) =>
+        gallery.get({ plain: true })
+      );
+      console.log("render galleries: ", galleries)
+      res.render('patient-appointments', {galleries});
+      console.log("after running the data render")
+  
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 const prescriptions = [
     {
@@ -83,28 +104,6 @@ router.get('/patient/appointments/waitingroom', async (req, res) => {
   res.sendFile('videoCall.html', {
     root: path.join(__dirname, './') // <= you might have to write '/foldername/
   })
-});
-
-
-
-// book a new appointment
-const BookAppointment = require('../models/Booking');
-
-// POST /api/users
-router.post('/patient/book-appointment/removethis', (req, res) => {
-  console.log("posted successfully");
-  BookAppointment.create({
-    username: req.session.username,
-    appointmentID: uuidv4(),
-    doctorName: req.body.doctorName,
-    date: req.body.date,
-    time: req.body.time,
-    symptoms: req.body.symptoms
-  })
-  .then(dbUserData => {
-
-
-  });
 });
 
 

@@ -64,34 +64,6 @@ router.get('/doctor/appointments', async (req, res) => {
   }
 });
 
-// router.get('/doctor/appointments', (req, res) => {
-//   BookAppointment.findAll({
-//     where: {
-//       doctorid: req.session.user_id
-//     }
-//   })
-//     .then(dbUserData => {
-//       const galleries = dbUserData.map((gallery) =>
-//         gallery.get({ plain: true })
-//       );
-//       console.log("render galleries: ", galleries)
-//       getUserName(galleries)
-//     })
-//     // .then(data => {
-//     //   User.findOne({
-//     //     where: {
-//     //       id: data.patientid
-//     //     }
-//     //   })
-//     // })
-//     // .then(data => {
-//     //   console.log("after running the data render", data)
-//     //   res.render('doctor-appointments', { galleries });
-//     // })
-
-
-// });
-
 
 router.get('/doctor/prescription', async (req, res) => {
   res.render('doctor-prescription', { appointments });
