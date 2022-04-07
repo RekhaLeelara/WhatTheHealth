@@ -36,7 +36,7 @@
         <td>{{this.symptoms}}</td>
         <td>{{this.status}}</td>
         <td>{{this.waitTime}}</td>
-        <td><button data-aptid="{{this.id}}" id="{{this.id}}">Check-In</button></td>
+        <td><button data-patientid="{{this.patientID}}" data-aptid="{{this.id}}" id="{{this.id}}">Check-In</button></td>
         <td><button>Cancel</button></td>
       </tr>
     {{/each}}
@@ -45,8 +45,10 @@
 
 <script>
       $('#appointments').click(function(e) {  
+        console.log(e.target.dataset)
+        popupURL = window.location.origin + '/videoCall.html?id=' + e.target.dataset.patientid
+        window.open(popupURL, "_blank");
         var url = '/patient/appointments/waitingroom/'
-        // + e.target.dataset.aptid
         document.location.replace(url);
         
     });
