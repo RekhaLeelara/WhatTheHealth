@@ -22,7 +22,11 @@ router.post('/user', (req, res) => {
       req.session.loggedIn = true;
       res.json(dbUserData);
     });
+    // send user to login page now
+    res.render('login')
   });
+
+
 });
 
 module.exports = router;

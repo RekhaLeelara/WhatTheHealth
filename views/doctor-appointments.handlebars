@@ -3,7 +3,6 @@
     <li><a data-link="appointments" >Appointments</a></li>
     <li><a data-link="prescription">Prescription</a></li>
     <li><a data-link="" class="active">Dashboard</a></li>
-    <li><a data-link="">Reference</a></li> 
     <li><a data-link="">Payroll</a></li>    
     {{!-- <li><a data-link="dashboard">Dashboard</a></li> --}}
     <li><a data-link="">My Profile</a></li>   
@@ -58,13 +57,21 @@
       </table>
     </div>
     <script>
-        console.log(e.target.dataset)
-        popupURL = window.location.origin + '/videoCall.html?id=' + e.target.dataset.patientid
-        window.open(popupURL, "_blank");
-        // var url = '/patient/appointments/waitingroom/'
-        // document.location.replace(url);
-
+      $('#appointments').click(function(e) {  
+        if(e.target.dataset.patientid){
+          console.log(e.target)
+          popupURL = window.location.origin + '/videoCall.html?id=' + e.target.dataset.patientid
+          window.open(popupURL, "_blank");
+          
+        }
+      })
+      // refresh the page every 10 seconds in case a patient checks into their appointment
+        var reload = setTimeout(reload, 10000);
+        function reload() {
+          location.reload()
+        }
     </script>
+
 
   </div>
 
