@@ -169,3 +169,12 @@ nav {
   margin: 0 auto;
 }
 
+#seconds {
+  font-size: 5em;}
+
+#minutes {
+  font-size: 5em;
+}
+#colon {
+  font-size: 5em;
+}
