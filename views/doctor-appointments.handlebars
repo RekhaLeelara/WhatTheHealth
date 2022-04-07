@@ -19,7 +19,7 @@
   <div class="medium-8 columns" style="background-color:#f1f1f1; height:fit-content;">
       
     <h1>Doctor Appointments</h1>
-    <div>
+    <div id="appointments" class="appointments">
       <table class="doctor-appointments .table">
         <thead>
           <tr>
@@ -46,10 +46,10 @@
             <td>{{this.patientname}}</td>
             <td>{{this.symptoms}}</td>
             <td>{{this.status}}</td>
-            <td>{{this.waitingRoom}}</td>
-            {{#if this.waitingRoom}}
+            <td>{{this.waitingroom}}</td>
+            
             <td><button data-patientid="{{this.patientid}}" style="width: 100%;">Start</button></td>
-            {{/if}}
+            
             <td><button style="width: 100%;">Cancel</button></td>
           </tr>
           {{/each}}
@@ -57,7 +57,8 @@
       </table>
     </div>
     <script>
-      $('#appointments').click(function(e) {  
+      $('#appointments').click(function(e) { 
+        console.log(e) 
         if(e.target.dataset.patientid){
           console.log(e.target)
           popupURL = window.location.origin + '/videoCall.html?id=' + e.target.dataset.patientid
