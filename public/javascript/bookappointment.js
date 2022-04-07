@@ -22,8 +22,8 @@ async function signupFormHandler(e) {
             headers: { "Content-Type": "application/json" }
         })
         .then(function(){
-            document.location.replace('/patient/appointments');
             alert(`Your Appointment with ${doctorName} on ${date} at ${time} has been booked successfully!`);
+            document.location.replace('/patient/appointments');
         })
         .catch(function(error){
             console.log("error!!");

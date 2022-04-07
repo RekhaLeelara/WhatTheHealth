@@ -19,7 +19,54 @@
 </script> 
 <div class="medium-8 columns" style="background-color:#f1f1f1;">
     
-  <h1>Write a New Prescription...</h1>
+  <h2>Prescription Form</h2>
+
+<form action="/action_page.php">
+  <label for="patientname">Patient Name:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="prescription">Prescription Name:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br>
+   <label for="form">Form of Prescription:</label>
+   <select id="selectNumber">
+  <option value="1">Select</option>
+  <option value="2">Pill</option>
+  <option value="3">Cream</option>
+  <option value="3">Other</option><br>
+  <input type="other" id="form" name="form" value="" placeholder= "Other Method of Prescription"><br>
+  <br>
+   <label for="Dosage">Dosage:</label><br>
+   <select id="selectNumber" text="Select Dosage">
+  <option value="1">Select</option>
+  <option value="2">Once Only</option>
+  <option value="3">Daily</option>
+  <option value="3">Twice a Day</option>
+  <option value="3">Weekly</option>
+</select>
+ 
+  <label for="fname">Quantity:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="fname">Refills:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <div class="dropdown">
+    <label>Expiration </label>
+        <input type="date">
+</div>
+  <label for="fname">Instructions for Patient:</label><br>
+  <textarea id="instructions" name="instructions" rows="4" cols="50">
+  
+  </textarea>
+
+  <br>
+  
+
+
+</div>
+  <div class="form-group">
+                <input type="submit" value="Add Prescription" id="Prescription-btn" class="btn btn-info btn-block" style="width: 50%;">
+            </div>
+</form> 
+
+
 
 
 </div>  
