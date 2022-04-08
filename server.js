@@ -43,7 +43,7 @@ app.use(require('./controllers/doctor-routes.js'));
 app.use(require('./controllers/login-routes.js'));
 app.use(require('./controllers/home-routes.js'));
 app.use(require('./controllers/book-appointment.js'));
-app.use(express.static('views/assets/img'));
+app.use(express.static('./views/assets/img'));
 
 app.use(routes);
 // Starts the server to begin listening
