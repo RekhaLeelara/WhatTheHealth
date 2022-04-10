@@ -16,6 +16,7 @@ The goal of our app is to have a common ground where:
 
 
 ## Technologies Used
+
 -Trello
 
 
