@@ -17,14 +17,28 @@ The goal of our app is to have a common ground where:
 
 ## Technologies Used
 -Trello
+
+
 -HTML
+
+
 -CSS
+
+
 -Javascript
+
+
 -Node.js
+
   -Express.js
+  
   -Sequelize
+  
   -Handlebars.js
+  
   -ChildProcess
+  
+  
 -MySQL
 
 
@@ -32,9 +46,17 @@ The goal of our app is to have a common ground where:
 
 
 ## Project Members:
+
+
 Rekha
+
+
 Abdi
+
+
 Enshen
+
+
 Michael
 
 
