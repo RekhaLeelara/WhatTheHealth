@@ -20,11 +20,12 @@ router.post('/user', (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.user_type = dbUserData.usertype;
       req.session.loggedIn = true;
-      res.json(dbUserData);
+      // res.json(dbUserData);
     });
-    // send user to login page now
-    res.render('login')
-  });
+
+  })
+  .then( data=>{   // send user to login page now
+    res.render('login')} )
 
 
 });
