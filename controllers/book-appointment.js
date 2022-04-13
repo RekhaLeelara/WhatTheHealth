@@ -60,6 +60,7 @@ router.post('/patient/book-appointment', (req, res) => {
       })
       .then(data => {
         console.log("data book appointment", data.toJSON());
+        res.sendStatus(200);
       });
   });
   
